@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoschApp.EntityLayer.Entities.SiparisEntity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,6 @@ namespace BoschApp.EntityLayer.Entities.UretimEntity
     {
         public int Id { get; set; }
         public int UretimDurumu { get; set; }
+        public Siparis Siparis { get; set; }
     }
 }

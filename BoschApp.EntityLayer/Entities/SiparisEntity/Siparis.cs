@@ -1,4 +1,5 @@
 ﻿using BoschApp.EntityLayer.Entities.EnjektorEntity;
+using BoschApp.EntityLayer.Entities.UretimEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace BoschApp.EntityLayer.Entities.SiparisEntity
         public int Adet { get; set; }
         public int SiparisDurumu { get; set; }
         public Enjektor Enjektor { get; set; }
+        public ICollection<Uretim> Uretims { get; set; }
     }
 }
