@@ -230,9 +230,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp\\BoschApp.csproj",
-      "projectName": "BoschApp",
-      "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp\\BoschApp.csproj",
+      "projectUniqueName": "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp\\BoschApp.WebAPI.csproj",
+      "projectName": "BoschApp.WebAPI",
+      "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp\\BoschApp.WebAPI.csproj",
       "packagesPath": "C:\\Users\\oxika\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zHf31RH656L1qFe1ADL6rGiUuRwV3BhzSW3hm/OTnqwIHjwyg+ub0RvIyJUd2lR7920Z12Hjnlg1Yf7ov1PvVQ==",
+  "dgSpecHash": "fHEWMk2X9J7vH+vyKYFImb+yfrlfGBNfl3yGJ5bC9BV7VLrfS77I4vlhkpfh28ax+Buj4Zt76zSKskXwsn4A4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp\\BoschApp.csproj",
+  "projectFilePath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp\\BoschApp.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oxika\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\oxika\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
