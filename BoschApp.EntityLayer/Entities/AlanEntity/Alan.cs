@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BoschApp.EntityLayer.Entities.Istasyon
+namespace BoschApp.EntityLayer.Entities.AlanEntity
 {
-    public class Istasyon
+    public class Alan
     {
         public int Id { get; set; }
         public string Isim { get; set; }
+        public ICollection<Departman> departmans { get; set; }
     }
 }

@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BoschApp.EntityLayer.Entities.Uretim
+namespace BoschApp.EntityLayer.Entities.EnjektorEntity
 {
-    public class Uretim
+    public class Enjektor
     {
         public int Id { get; set; }
-        public int UretimDurumu { get; set; }
+        public string Tur { get; set; }
+        public string ModelNo { get; set; }
     }
 }

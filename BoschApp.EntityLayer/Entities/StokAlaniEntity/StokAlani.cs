@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BoschApp.EntityLayer.Entities.StokAlani
+namespace BoschApp.EntityLayer.Entities.StokAlaniEntity
 {
     public class StokAlani
     {

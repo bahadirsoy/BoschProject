@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BoschApp.EntityLayer.Entities.Kisim
+namespace BoschApp.EntityLayer.Entities.DepartmanEntityEntity
 {
-    public class Kisim
+    public class Departman
     {
         public int Id { get; set; }
-        public string KisimNo { get; set; }
+        public string Isim { get; set; }
+        public float Butce { get; set; }
     }
 }

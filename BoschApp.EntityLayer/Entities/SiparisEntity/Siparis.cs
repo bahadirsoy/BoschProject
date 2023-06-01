@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BoschApp.EntityLayer.Entities.Departman
+namespace BoschApp.EntityLayer.Entities.SiparisEntity
 {
-    public class Departman
+    public class Siparis
     {
         public int Id { get; set; }
-        public string Isim { get; set; }
-        public float Butce { get; set; }
+        public int Adet { get; set; }
+        public int SiparisDurumu { get; set; }
     }
 }
