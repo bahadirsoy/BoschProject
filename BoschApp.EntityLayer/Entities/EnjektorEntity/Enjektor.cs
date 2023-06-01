@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoschApp.EntityLayer.Entities.KisimEntity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,6 @@ namespace BoschApp.EntityLayer.Entities.EnjektorEntity
         public int Id { get; set; }
         public string Tur { get; set; }
         public string ModelNo { get; set; }
+        public Kisim Kisim { get; set; }
     }
 }

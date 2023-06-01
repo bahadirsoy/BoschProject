@@ -1,4 +1,5 @@
 ﻿using BoschApp.EntityLayer.Entities.DepartmanEntityEntity;
+using BoschApp.EntityLayer.Entities.EnjektorEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,6 @@ namespace BoschApp.EntityLayer.Entities.KisimEntity
         public int Id { get; set; }
         public string KisimNo { get; set; }
         public Departman Departman { get; set; }
+        public ICollection<Enjektor> Enjektors { get; set; }
     }
 }
