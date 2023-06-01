@@ -1,4 +1,5 @@
 ﻿using BoschApp.EntityLayer.Entities.KisimEntity;
+using BoschApp.EntityLayer.Entities.SiparisEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace BoschApp.EntityLayer.Entities.EnjektorEntity
         public string Tur { get; set; }
         public string ModelNo { get; set; }
         public Kisim Kisim { get; set; }
+        public ICollection<Siparis> Siparis { get; set; }
     }
 }
