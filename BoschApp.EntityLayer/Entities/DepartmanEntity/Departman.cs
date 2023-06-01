@@ -1,4 +1,5 @@
 ﻿using BoschApp.EntityLayer.Entities.AlanEntity;
+using BoschApp.EntityLayer.Entities.KisimEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace BoschApp.EntityLayer.Entities.DepartmanEntityEntity
         public string Isim { get; set; }
         public float Butce { get; set; }
         public Alan Alan { get; set; }
+        public ICollection<Kisim> Kisims { get; set; }
     }
 }
