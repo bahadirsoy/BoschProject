@@ -1,4 +1,5 @@
-﻿using BoschApp.EntityLayer.Entities.UretimEntity;
+﻿using BoschApp.EntityLayer.Entities.IstasyonEntity;
+using BoschApp.EntityLayer.Entities.UretimEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,6 @@ namespace BoschApp.EntityLayer.Entities.AltParcaEntity
         public int Id { get; set; }
         public float Masraf { get; set; }
         public ICollection<Uretim> Uretims { get; set; }
+        public Istasyon Istasyon { get; set; }
     }
 }

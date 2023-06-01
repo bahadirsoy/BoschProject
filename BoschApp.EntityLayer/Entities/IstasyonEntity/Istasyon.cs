@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoschApp.EntityLayer.Entities.AltParcaEntity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,6 @@ namespace BoschApp.EntityLayer.Entities.IstasyonEntity
     {
         public int Id { get; set; }
         public string Isim { get; set; }
+        public ICollection<AltParca> AltParcas { get; set; }
     }
 }
