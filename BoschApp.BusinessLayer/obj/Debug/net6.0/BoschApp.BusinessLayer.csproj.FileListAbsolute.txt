@@ -10,3 +10,5 @@ C:\Users\oxika\source\repos\BoschApp\BoschApp.BusinessLayer\obj\Debug\net6.0\Bos
 C:\Users\oxika\source\repos\BoschApp\BoschApp.BusinessLayer\obj\Debug\net6.0\refint\BoschApp.BusinessLayer.dll
 C:\Users\oxika\source\repos\BoschApp\BoschApp.BusinessLayer\obj\Debug\net6.0\BoschApp.BusinessLayer.pdb
 C:\Users\oxika\source\repos\BoschApp\BoschApp.BusinessLayer\obj\Debug\net6.0\ref\BoschApp.BusinessLayer.dll
+C:\Users\oxika\source\repos\BoschApp\BoschApp.BusinessLayer\bin\Debug\net6.0\BoschApp.BusinessLayer.runtimeconfig.json
+C:\Users\oxika\source\repos\BoschApp\BoschApp.BusinessLayer\obj\Debug\net6.0\BoschApp.BusinessLayer.genruntimeconfig.cache

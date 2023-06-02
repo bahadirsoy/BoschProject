@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "XN/BrwCh+tJgEo5xodsUIvI8lQ+alckZqVGV51j40CM=",
+  "Source": "BoschApp.WebAPI",
+  "BasePath": "_content/BoschApp.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
