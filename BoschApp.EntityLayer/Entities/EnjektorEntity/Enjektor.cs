@@ -1,4 +1,5 @@
-﻿using BoschApp.EntityLayer.Entities.KisimEntity;
+﻿using BoschApp.EntityLayer.Entities.EnjektorAltParcaEntity;
+using BoschApp.EntityLayer.Entities.KisimEntity;
 using BoschApp.EntityLayer.Entities.SiparisEntity;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,6 @@ namespace BoschApp.EntityLayer.Entities.EnjektorEntity
         public string ModelNo { get; set; }
         public Kisim Kisim { get; set; }
         public ICollection<Siparis> Siparis { get; set; }
+        public ICollection<EnjektorAltParca> EnjektorAltParcas { get; set; }
     }
 }
