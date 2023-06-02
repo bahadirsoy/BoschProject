@@ -34,5 +34,19 @@ namespace BoschApp.DataAccessLayer.Data
         public DbSet<Siparis> Siparises { get; set; }
         public DbSet<StokAlani> StokAlanis { get; set; }
         public DbSet<Uretim> Uretims { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<EnjektorAltParca>()
+                .HasKey(ea => new { ea.EnjektorId, ea.AltParcaId });
+            modelBuilder.Entity<EnjektorAltParca>()
+                .HasOne(e => e.Enjektor)
+                .WithMany(ea => ea.EnjektorAltParcas)
+                .HasForeignKey(e => e.EnjektorId);
+            modelBuilder.Entity<EnjektorAltParca>()
+                .HasOne(a => a.AltParca)
+                .WithMany(ea => ea.EnjektorAltParcas)
+                .HasForeignKey(a => a.AltParcaId);
+        }
     }
 }
