@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5BPHtB9jn6W+zXhQVtWZTQORXdgZRan3CAl4oHDERr1PhwcZctpbWzcxX0SViwVe1losH7020r+XUoj5HtkMIA==",
+  "dgSpecHash": "DrAi2hvvaiWX1/8gTygmQUaZZ7ssmNa6EYhKCm77bJACqrO0KX9IDMNBptCGRifl6pfgI0ozfk3gOH5+eqr/Vg==",
   "success": true,
   "projectFilePath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp.BusinessLayer\\BoschApp.BusinessLayer.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\oxika\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.5\\microsoft.entityframeworkcore.design.7.0.5.nupkg.sha512",
     "C:\\Users\\oxika\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.5\\microsoft.entityframeworkcore.relational.7.0.5.nupkg.sha512",
     "C:\\Users\\oxika\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.5\\microsoft.entityframeworkcore.sqlserver.7.0.5.nupkg.sha512",
+    "C:\\Users\\oxika\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.5\\microsoft.entityframeworkcore.tools.7.0.5.nupkg.sha512",
     "C:\\Users\\oxika\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\oxika\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\oxika\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
