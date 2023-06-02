@@ -11,6 +11,6 @@ namespace BoschApp.EntityLayer.Entities.AlanEntity
     {
         public int Id { get; set; }
         public string Isim { get; set; }
-        public ICollection<Departman> departmans { get; set; }
+        public ICollection<Departman> Departmans { get; set; }
     }
 }
