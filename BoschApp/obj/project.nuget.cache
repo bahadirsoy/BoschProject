@@ -1,16 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "3ZiriGeHBTbWCpGRN+Fac5z48R9bWKLFKFcm+9IhfnlvSeEOYxZoxOgYlfeU5uz7Dgkh3Lj+qV9WgmrwefO6IQ==",
+  "dgSpecHash": "i9RZ7U9YnsHMSKX8BIHPpH755V76wuK94wG2LyWrVwtfGffUNYMZQ4u8VVlKqVgiNnDs9j5OVnwXd9i7tg+JQw==",
   "success": true,
   "projectFilePath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp\\BoschApp.WebAPI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\oxika\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\oxika\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\oxika\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\oxika\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\oxika\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\oxika\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\oxika\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\oxika\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\oxika\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
     "C:\\Users\\oxika\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.0.1\\microsoft.data.sqlclient.sni.runtime.5.0.1.nupkg.sha512",
     "C:\\Users\\oxika\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
