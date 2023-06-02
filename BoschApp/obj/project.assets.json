@@ -1242,6 +1242,33 @@
             "rid": "win"
           }
         }
+      },
+      "BoschApp.DataAccessLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BoschApp.EntityLayer": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5"
+        },
+        "compile": {
+          "bin/placeholder/BoschApp.DataAccessLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BoschApp.DataAccessLayer.dll": {}
+        }
+      },
+      "BoschApp.EntityLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5"
+        },
+        "compile": {
+          "bin/placeholder/BoschApp.EntityLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BoschApp.EntityLayer.dll": {}
+        }
       }
     }
   },
@@ -3712,10 +3739,21 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "BoschApp.DataAccessLayer/1.0.0": {
+      "type": "project",
+      "path": "../BoschApp.DataAccessLayer/BoschApp.DataAccessLayer.csproj",
+      "msbuildProject": "../BoschApp.DataAccessLayer/BoschApp.DataAccessLayer.csproj"
+    },
+    "BoschApp.EntityLayer/1.0.0": {
+      "type": "project",
+      "path": "../BoschApp.EntityLayer/BoschApp.EntityLayer.csproj",
+      "msbuildProject": "../BoschApp.EntityLayer/BoschApp.EntityLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BoschApp.DataAccessLayer >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
@@ -3752,7 +3790,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
