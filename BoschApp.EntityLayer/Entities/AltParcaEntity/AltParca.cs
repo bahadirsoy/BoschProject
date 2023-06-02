@@ -13,6 +13,7 @@ namespace BoschApp.EntityLayer.Entities.AltParcaEntity
     public class AltParca
     {
         public int Id { get; set; }
+        public string Name { get; set; }
         public float Masraf { get; set; }
         public ICollection<Uretim> Uretims { get; set; }
         public Istasyon Istasyon { get; set; }
