@@ -1155,6 +1155,19 @@
             "rid": "win"
           }
         }
+      },
+      "BoschApp.EntityLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5"
+        },
+        "compile": {
+          "bin/placeholder/BoschApp.EntityLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BoschApp.EntityLayer.dll": {}
+        }
       }
     }
   },
@@ -3500,10 +3513,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "BoschApp.EntityLayer/1.0.0": {
+      "type": "project",
+      "path": "../BoschApp.EntityLayer/BoschApp.EntityLayer.csproj",
+      "msbuildProject": "../BoschApp.EntityLayer/BoschApp.EntityLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BoschApp.EntityLayer >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5"
@@ -3539,7 +3558,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj": {
+              "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
