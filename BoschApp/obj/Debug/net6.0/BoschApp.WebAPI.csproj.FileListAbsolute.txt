@@ -91,3 +91,5 @@ C:\Users\oxika\source\repos\BoschApp\BoschApp\obj\Debug\net6.0\BoschApp.WebAPI.g
 C:\Users\oxika\source\repos\BoschApp\BoschApp\obj\Debug\net6.0\ref\BoschApp.WebAPI.dll
 C:\Users\oxika\source\repos\BoschApp\BoschApp\bin\Debug\net6.0\BoschApp.BusinessLayer.dll
 C:\Users\oxika\source\repos\BoschApp\BoschApp\bin\Debug\net6.0\BoschApp.BusinessLayer.pdb
+C:\Users\oxika\source\repos\BoschApp\BoschApp\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\oxika\source\repos\BoschApp\BoschApp\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
