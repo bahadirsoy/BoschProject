@@ -13,5 +13,13 @@ namespace BoschApp.WebAPI.Controllers
         {
             _alanBusinessService = alanBusinessService;
         }
+
+        [HttpGet]
+        public IActionResult GetAlans()
+        {
+            var alans = _alanBusinessService.GetAlans();
+
+            return Ok(alans);
+        }
     }
 }

@@ -89,3 +89,5 @@ C:\Users\oxika\source\repos\BoschApp\BoschApp\obj\Debug\net6.0\refint\BoschApp.W
 C:\Users\oxika\source\repos\BoschApp\BoschApp\obj\Debug\net6.0\BoschApp.WebAPI.pdb
 C:\Users\oxika\source\repos\BoschApp\BoschApp\obj\Debug\net6.0\BoschApp.WebAPI.genruntimeconfig.cache
 C:\Users\oxika\source\repos\BoschApp\BoschApp\obj\Debug\net6.0\ref\BoschApp.WebAPI.dll
+C:\Users\oxika\source\repos\BoschApp\BoschApp\bin\Debug\net6.0\BoschApp.BusinessLayer.dll
+C:\Users\oxika\source\repos\BoschApp\BoschApp\bin\Debug\net6.0\BoschApp.BusinessLayer.pdb

@@ -20,11 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\BoschApp.DataAccessLayer\BoschApp.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\BoschApp.BusinessLayer\BoschApp.BusinessLayer.csproj" />
   </ItemGroup>
 
 </Project>
