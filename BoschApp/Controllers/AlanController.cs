@@ -37,5 +37,25 @@ namespace BoschApp.WebAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("{alanId}")]
+        public IActionResult GetAlan(int alanId)
+        {
+            try
+            {
+                var alan = _mapper.Map<AlanDto>(_alanBusinessService.GetAlan(alanId));
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(alan);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
