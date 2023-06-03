@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BoschApp.BusinessLayer.Abstract;
+using BoschApp.WebAPI.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BoschApp.WebAPI.Controllers
@@ -15,6 +16,26 @@ namespace BoschApp.WebAPI.Controllers
         {
             _kisimBusinessService = kisimBusinessService;
             _mapper = mapper;
+        }
+
+        [HttpGet("{kisimId}/departman")]
+        public IActionResult GetDepartmanByKisim(int kisimId)
+        {
+            try
+            {
+                var departman = _mapper.Map<DepartmanDto>(_kisimBusinessService.GetDepartmanByKisim(kisimId));
+
+                if(!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(departman);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

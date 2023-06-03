@@ -42,7 +42,7 @@ namespace BoschApp.DataAccessLayer.Concrete
 
         public bool KisimExist(int kisimId)
         {
-            throw new NotImplementedException();
+            return _context.Kisims.Any(k => k.Id == kisimId);
         }
     }
 }
