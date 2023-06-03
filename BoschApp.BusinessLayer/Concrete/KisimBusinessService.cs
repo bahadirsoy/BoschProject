@@ -25,22 +25,65 @@ namespace BoschApp.BusinessLayer.Concrete
 
         public Departman GetDepartmanByKisim(int kisimId)
         {
-            throw new NotImplementedException();
+            if (!_kisimRepository.KisimExist(kisimId))
+            {
+                throw new Exception("There is no kisim with id: " + kisimId);
+            }
+
+            var kisim = _kisimRepository.GetDepartmanByKisim(kisimId);
+
+            if (_rules.IsNull(kisim))
+            {
+                throw new Exception("There is no departman belonging to this kisim");
+            }
+
+            return kisim;
         }
 
         public ICollection<Enjektor> GetEnjektorsByKisim(int kisimId)
         {
-            throw new NotImplementedException();
+            if (_kisimRepository.KisimExist(kisimId))
+            {
+                throw new Exception("There is no kisim with id: " + kisimId);
+            }
+
+            var enjektors = _kisimRepository.GetEnjektorsByKisim(kisimId);
+
+            if (_rules.IsNull(enjektors))
+            {
+                throw new Exception("This kisim has no enjektor");
+            }
+
+            return enjektors;
         }
 
         public Kisim GetKisim(int kisimId)
         {
-            throw new NotImplementedException();
+            if (_kisimRepository.KisimExist(kisimId))
+            {
+                throw new Exception("There is no kisim with id: " + kisimId);
+            }
+
+            var kisim = _kisimRepository.GetKisim(kisimId);
+
+            if (_rules.IsNull(kisim))
+            {
+                throw new Exception("There is no such kisim");
+            }
+
+            return kisim;
         }
 
         public ICollection<Kisim> GetKisims()
         {
-            throw new NotImplementedException();
+            var kisims = _kisimRepository.GetKisims();
+
+            if (_rules.IsNull(kisims))
+            {
+                throw new Exception("There is no kisim");
+            }
+
+            return kisims;
         }
     }
 }
