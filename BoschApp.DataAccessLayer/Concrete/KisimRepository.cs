@@ -22,22 +22,22 @@ namespace BoschApp.DataAccessLayer.Concrete
 
         public Departman GetDepartmanByKisim(int kisimId)
         {
-            throw new NotImplementedException();
+            return _context.Kisims.Where(k => k.Id == kisimId).Select(d => d.Departman).FirstOrDefault();
         }
 
         public ICollection<Enjektor> GetEnjektorsByKisim(int kisimId)
         {
-            throw new NotImplementedException();
+            return _context.Enjektors.Where(e => e.Kisim.Id == kisimId).ToList();
         }
 
         public Kisim GetKisim(int kisimId)
         {
-            throw new NotImplementedException();
+            return _context.Kisims.Where(k => k.Id == kisimId).FirstOrDefault();
         }
 
         public ICollection<Kisim> GetKisims()
         {
-            throw new NotImplementedException();
+            return _context.Kisims.ToList();
         }
 
         public bool KisimExist(int kisimId)
