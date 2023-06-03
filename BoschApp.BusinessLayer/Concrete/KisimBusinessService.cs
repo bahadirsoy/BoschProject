@@ -42,7 +42,7 @@ namespace BoschApp.BusinessLayer.Concrete
 
         public ICollection<Enjektor> GetEnjektorsByKisim(int kisimId)
         {
-            if (_kisimRepository.KisimExist(kisimId))
+            if (!_kisimRepository.KisimExist(kisimId))
             {
                 throw new Exception("There is no kisim with id: " + kisimId);
             }
@@ -59,7 +59,7 @@ namespace BoschApp.BusinessLayer.Concrete
 
         public Kisim GetKisim(int kisimId)
         {
-            if (_kisimRepository.KisimExist(kisimId))
+            if (!_kisimRepository.KisimExist(kisimId))
             {
                 throw new Exception("There is no kisim with id: " + kisimId);
             }

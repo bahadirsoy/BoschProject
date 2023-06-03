@@ -37,5 +37,25 @@ namespace BoschApp.WebAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("{kisimId}/enjektor")]
+        public IActionResult GetEnjektorsByKisim(int kisimId)
+        {
+            try
+            {
+                var enjektors = _mapper.Map<List<EnjektorDto>>(_kisimBusinessService.GetEnjektorsByKisim(kisimId));
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(enjektors);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
