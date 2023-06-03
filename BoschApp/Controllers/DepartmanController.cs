@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BoschApp.BusinessLayer.Abstract;
+using BoschApp.BusinessLayer.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BoschApp.WebAPI.Controllers
@@ -17,12 +18,12 @@ namespace BoschApp.WebAPI.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("{departmanId}")]
+        [HttpGet("{departmanId}/alan")]
         public IActionResult GetAlanByDepartman(int departmanId)
         {
             try
             {
-                var alan = _departmanBusinessService.GetAlanByDepartman(departmanId);
+                var alan = _mapper.Map<AlanDto>(_departmanBusinessService.GetAlanByDepartman(departmanId));
 
                 if(!ModelState.IsValid)
                 {
