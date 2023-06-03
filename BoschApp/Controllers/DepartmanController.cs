@@ -58,5 +58,25 @@ namespace BoschApp.WebAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet()]
+        public IActionResult GetDepartmans()
+        {
+            try
+            {
+                var departmans = _mapper.Map<List<DepartmanDto>>(_departmanBusinessService.GetDepartmans());
+
+                if (!ModelState.IsValid) 
+                { 
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(departmans);
+            }
+            catch( Exception ex )
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
