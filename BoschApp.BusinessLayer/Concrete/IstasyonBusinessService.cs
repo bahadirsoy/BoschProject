@@ -3,6 +3,7 @@ using BoschApp.BusinessLayer.Rules;
 using BoschApp.DataAccessLayer.Abstract;
 using BoschApp.EntityLayer.Entities.AltParcaEntity;
 using BoschApp.EntityLayer.Entities.IstasyonEntity;
+using BoschApp.EntityLayer.Entities.KisimEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,17 +25,48 @@ namespace BoschApp.BusinessLayer.Concrete
 
         public ICollection<AltParca> GetAltParcasByIstasyon(int istasyonId)
         {
-            throw new NotImplementedException();
+            if (!_istasyonRepository.IstasyonExist(istasyonId))
+            {
+                throw new Exception("There is no istasyon with id: " + istasyonId);
+            }
+
+            var altParcas = _istasyonRepository.GetAltParcasByIstasyon(istasyonId);
+
+            if (_rules.IsNull(altParcas))
+            {
+                throw new Exception("This istasyon has no altParca");
+            }
+
+            return altParcas;
         }
 
         public Istasyon GetIstasyon(int istasyonId)
         {
-            throw new NotImplementedException();
+            if (!_istasyonRepository.IstasyonExist(istasyonId))
+            {
+                throw new Exception("There is no istasyon with id: " + istasyonId);
+            }
+
+            var istasyon = _istasyonRepository.GetIstasyon(istasyonId);
+
+            if (_rules.IsNull(istasyon))
+            {
+                throw new Exception("There is no such istasyon");
+            }
+
+            return istasyon;
         }
 
         public ICollection<Istasyon> GetIstasyons()
         {
-            throw new NotImplementedException();
+            var istasyons = _istasyonRepository.GetIstasyons();
+
+            if (_rules.IsNull(istasyons))
+            {
+                throw new Exception("There is no istasyon");
+            }
+
+            return istasyons;
         }
     }
 }
