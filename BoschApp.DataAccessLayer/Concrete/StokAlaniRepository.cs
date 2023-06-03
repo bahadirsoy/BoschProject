@@ -1,6 +1,7 @@
 ﻿using BoschApp.DataAccessLayer.Abstract;
 using BoschApp.DataAccessLayer.Data;
 using BoschApp.EntityLayer.Entities.StokAlaniEntity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace BoschApp.DataAccessLayer.Concrete
 
         public ICollection<StokAlani> GetStokAlanis()
         {
-            throw new NotImplementedException();
+            return _context.StokAlanis.Include(s => s.AltParca).ToList();
         }
 
         public bool StokAlaniExist(int stokAlaniId)
