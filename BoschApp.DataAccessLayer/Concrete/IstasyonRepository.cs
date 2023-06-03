@@ -21,22 +21,22 @@ namespace BoschApp.DataAccessLayer.Concrete
 
         public ICollection<AltParca> GetAltParcasByIstasyon(int istasyonId)
         {
-            throw new NotImplementedException();
+            return _context.AltParcas.Where(a => a.Istasyon.Id == istasyonId).ToList();
         }
 
         public Istasyon GetIstasyon(int istasyonId)
         {
-            throw new NotImplementedException();
+            return _context.Istasyons.Where(i => i.Id == istasyonId).FirstOrDefault();
         }
 
         public ICollection<Istasyon> GetIstasyons()
         {
-            throw new NotImplementedException();
+            return _context.Istasyons.ToList();
         }
 
         public bool IstasyonExist(int istasyonId)
         {
-            throw new NotImplementedException();
+            return _context.Istasyons.Any(i => i.Id == istasyonId);
         }
     }
 }
