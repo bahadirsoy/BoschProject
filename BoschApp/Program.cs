@@ -20,6 +20,8 @@ builder.Services.AddScoped<IDepartmanRepository, DepartmanRepository>();
 builder.Services.AddScoped<IDepartmanBusinessService, DepartmanBusinessService>();
 builder.Services.AddScoped<IKisimRepository, KisimRepository>();
 builder.Services.AddScoped<IKisimBusinessService, KisimBusinessService>();
+builder.Services.AddScoped<IIstasyonRepository, IstasyonRepository>();
+builder.Services.AddScoped<IIstasyonBusinessService, IstasyonBusinessService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
