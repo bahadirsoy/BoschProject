@@ -5,6 +5,7 @@ using BoschApp.DataAccessLayer.Abstract;
 using BoschApp.DataAccessLayer.Concrete;
 using BoschApp.BusinessLayer.Abstract;
 using BoschApp.BusinessLayer.Concrete;
+using BoschApp.BusinessLayer.Rules;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IAlanRepository, AlanRepository>();
+builder.Services.AddScoped<BusinessRules>();
 builder.Services.AddScoped<IAlanBusinessService, AlanBusinessService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
