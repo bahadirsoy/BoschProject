@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BoschApp.BusinessLayer.Abstract;
 using BoschApp.BusinessLayer.Dto;
+using BoschApp.WebAPI.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BoschApp.WebAPI.Controllers
@@ -63,7 +64,7 @@ namespace BoschApp.WebAPI.Controllers
         {
             try
             {
-                var departmans = _alanBusinessService.GetDepartmantsByAlan(alanId);
+                var departmans = _mapper.Map<List<DepartmanDto>>(_alanBusinessService.GetDepartmantsByAlan(alanId));
 
                 if (!ModelState.IsValid)
                 {
