@@ -6,6 +6,7 @@ using BoschApp.EntityLayer.Entities.DepartmanEntityEntity;
 using BoschApp.EntityLayer.Entities.EnjektorEntity;
 using BoschApp.EntityLayer.Entities.IstasyonEntity;
 using BoschApp.EntityLayer.Entities.KisimEntity;
+using BoschApp.EntityLayer.Entities.StokAlaniEntity;
 using BoschApp.WebAPI.Dto;
 
 namespace BoschApp.WebAPI.Helper
@@ -20,6 +21,7 @@ namespace BoschApp.WebAPI.Helper
             CreateMap<Enjektor, EnjektorDto>();
             CreateMap<Istasyon, IstasyonDto>();
             CreateMap<AltParca, AltParcaDto>();
+            CreateMap<StokAlani, StokAlaniDto>();
         }
     }
 }
