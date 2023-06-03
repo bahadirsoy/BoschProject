@@ -58,5 +58,25 @@ namespace BoschApp.WebAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet()]
+        public IActionResult GetIstasyons()
+        {
+            try
+            {
+                var istasyons = _mapper.Map<List<IstasyonDto>>(_istasyonBusinessService.GetIstasyons());
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(istasyons);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
