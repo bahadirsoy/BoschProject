@@ -30,6 +30,11 @@ namespace BoschApp.BusinessLayer.Concrete
 
             var alan = _alanRepository.GetAlan(alanId);
 
+            if (_rules.IsNull(alan))
+            {
+                throw new Exception("Alan with id: " + alanId + " is null");
+            }
+
             return alan;
         }
 
@@ -37,7 +42,10 @@ namespace BoschApp.BusinessLayer.Concrete
         {
             var alans = _alanRepository.GetAlans();
 
-            _rules.IsNull(alans);
+            if(_rules.IsNull(alans))
+            {
+                throw new Exception("There is no Alans");
+            }
 
             return alans;
         }
