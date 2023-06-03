@@ -46,7 +46,7 @@ namespace BoschApp.BusinessLayer.Concrete
 
             if(_rules.IsNull(alans))
             {
-                throw new Exception("There is no Alans");
+                throw new Exception("There is no Alan");
             }
 
             return alans;

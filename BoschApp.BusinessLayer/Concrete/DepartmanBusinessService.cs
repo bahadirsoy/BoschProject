@@ -24,22 +24,65 @@ namespace BoschApp.BusinessLayer.Concrete
         }
         public Alan GetAlanByDepartman(int departmanId)
         {
-            throw new NotImplementedException();
+            if(!_departmanRepository.DepartmanExist(departmanId))
+            {
+                throw new Exception("There is no departman with id: " + departmanId);
+            }
+
+            var alan = _departmanRepository.GetAlanByDepartman(departmanId);
+
+            if (_rules.IsNull(alan))
+            {
+                throw new Exception("There is no such Alan");
+            }
+
+            return alan;
         }
 
         public Departman GetDepartman(int departmanId)
         {
-            throw new NotImplementedException();
+            if (!_departmanRepository.DepartmanExist(departmanId))
+            {
+                throw new Exception("There is no departman with id: " + departmanId);
+            }
+
+            var departman = _departmanRepository.GetDepartman(departmanId);
+
+            if (_rules.IsNull(departman))
+            {
+                throw new Exception("There is no such departman");
+            }
+
+            return departman;
         }
 
         public ICollection<Departman> GetDepartmans()
         {
-            throw new NotImplementedException();
+            var departmans = _departmanRepository.GetDepartmans();
+
+            if (_rules.IsNull(departmans))
+            {
+                throw new Exception("There is no departman");
+            }
+
+            return departmans;
         }
 
         public ICollection<Kisim> GetKisimsByDepartman(int departmanId)
         {
-            throw new NotImplementedException();
+            if (!_departmanRepository.DepartmanExist(departmanId))
+            {
+                throw new Exception("There is no departman with id: " + departmanId);
+            }
+
+            var kisims = _departmanRepository.GetKisimsByDepartman(departmanId);
+
+            if (_rules.IsNull(kisims))
+            {
+                throw new Exception("There is no kisim belonging to this departman");
+            }
+
+            return kisims;
         }
     }
 }
