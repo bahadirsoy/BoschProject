@@ -21,9 +21,21 @@ namespace BoschApp.WebAPI.Controllers
         [HttpGet]
         public IActionResult GetAlans()
         {
-            var alans = _mapper.Map<List<AlanDto>>(_alanBusinessService.GetAlans());
+            try
+            {
+                var alans = _mapper.Map<List<AlanDto>>(_alanBusinessService.GetAlans());
 
-            return Ok(alans);
+                if(!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(alans);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }
