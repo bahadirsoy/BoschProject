@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BoschApp.BusinessLayer.Abstract;
 using BoschApp.BusinessLayer.Dto;
+using BoschApp.WebAPI.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BoschApp.WebAPI.Controllers
@@ -33,6 +34,26 @@ namespace BoschApp.WebAPI.Controllers
                 return Ok(alan);
             }
             catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("{departmanId}")]
+        public IActionResult GetDepartman(int departmanId)
+        {
+            try
+            {
+                var departman = _mapper.Map<DepartmanDto>(_departmanBusinessService.GetDepartman(departmanId));
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(departman);
+            }
+            catch(Exception ex)
             {
                 return BadRequest(ex.Message);
             }
