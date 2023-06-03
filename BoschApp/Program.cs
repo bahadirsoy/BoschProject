@@ -16,6 +16,8 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IAlanRepository, AlanRepository>();
 builder.Services.AddScoped<BusinessRules>();
 builder.Services.AddScoped<IAlanBusinessService, AlanBusinessService>();
+builder.Services.AddScoped<IDepartmanRepository, DepartmanRepository>();
+builder.Services.AddScoped<IDepartmanBusinessService, DepartmanBusinessService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
