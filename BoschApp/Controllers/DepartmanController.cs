@@ -78,5 +78,25 @@ namespace BoschApp.WebAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("{departmanId}/kisims")]
+        public IActionResult GetKisimsByDepartman(int departmanId)
+        {
+            try
+            {
+                var kisims = _mapper.Map<List<KisimDto>>(_departmanBusinessService.GetKisimsByDepartman(departmanId));
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(kisims);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
