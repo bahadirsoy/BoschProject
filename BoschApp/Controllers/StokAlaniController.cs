@@ -16,5 +16,25 @@ namespace BoschApp.WebAPI.Controllers
             _stokAlaniBusinessService = stokAlaniBusinessService;
             _mapper = mapper;
         }
+
+        [HttpGet()]
+        public IActionResult GetStokAlanis()
+        {
+            try
+            {
+                var stokAlanis = _stokAlaniBusinessService.GetStokAlanis();
+
+                if(!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(stokAlanis);
+            }
+            catch (Exception ex) 
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
