@@ -10,5 +10,7 @@ namespace BoschApp.DataAccessLayer.Abstract
     public interface IAlanRepository
     {
         ICollection<Alan> GetAlans();
+        Alan GetAlan(int alanId);
+        bool AlanExist(int alanId);
     }
 }
