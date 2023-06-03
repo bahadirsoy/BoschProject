@@ -1,5 +1,6 @@
 ﻿using BoschApp.BusinessLayer.Abstract;
 using BoschApp.BusinessLayer.Rules;
+using BoschApp.DataAccessLayer.Abstract;
 using BoschApp.EntityLayer.Entities.StokAlaniEntity;
 using System;
 using System.Collections.Generic;
@@ -11,12 +12,12 @@ namespace BoschApp.BusinessLayer.Concrete
 {
     public class StokAlaniBusinessService : IStokAlaniBusinessService
     {
-        private readonly IStokAlaniBusinessService _stokAlaniBusinessService;
+        private readonly IStokAlaniRepository _stokAlaniRepository;
         private readonly BusinessRules _rules;
 
-        public StokAlaniBusinessService(IStokAlaniBusinessService stokAlaniBusinessService, BusinessRules rules)
+        public StokAlaniBusinessService(IStokAlaniRepository stokAlaniRepository, BusinessRules rules)
         {
-            _stokAlaniBusinessService = stokAlaniBusinessService;
+            _stokAlaniRepository = stokAlaniRepository;
             _rules = rules;
         }
 
@@ -27,7 +28,7 @@ namespace BoschApp.BusinessLayer.Concrete
 
         public ICollection<StokAlani> GetStokAlanis()
         {
-            var stokAlanis = _stokAlaniBusinessService.GetStokAlanis();
+            var stokAlanis = _stokAlaniRepository.GetStokAlanis();
 
             if (_rules.IsNull(stokAlanis))
             {
