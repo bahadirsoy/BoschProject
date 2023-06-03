@@ -1,6 +1,7 @@
 ﻿using BoschApp.DataAccessLayer.Abstract;
 using BoschApp.DataAccessLayer.Data;
 using BoschApp.EntityLayer.Entities.AlanEntity;
+using BoschApp.EntityLayer.Entities.DepartmanEntityEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,11 @@ namespace BoschApp.DataAccessLayer.Concrete
         public ICollection<Alan> GetAlans()
         {
             return _context.Alans.ToList();
+        }
+
+        public ICollection<Departman> GetDepartmansByAlan(int alanId)
+        {
+            return _context.Departmants.Where(d => d.Alan.Id == alanId).ToList();
         }
     }
 }

@@ -2,9 +2,11 @@
 using BoschApp.BusinessLayer.Rules;
 using BoschApp.DataAccessLayer.Abstract;
 using BoschApp.EntityLayer.Entities.AlanEntity;
+using BoschApp.EntityLayer.Entities.DepartmanEntityEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -48,6 +50,23 @@ namespace BoschApp.BusinessLayer.Concrete
             }
 
             return alans;
+        }
+
+        public ICollection<Departman> GetDepartmantsByAlan(int alanId)
+        {
+            if (!_alanRepository.AlanExist(alanId))
+            {
+                throw new Exception("There is no Alan with id: " + alanId);
+            }
+
+            var departmans = _alanRepository.GetDepartmansByAlan(alanId);
+
+            if (_rules.IsNull(departmans))
+            {
+                throw new Exception("There is no Alans");
+            }
+
+            return departmans;
         }
     }
 }

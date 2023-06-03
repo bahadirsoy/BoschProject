@@ -57,5 +57,25 @@ namespace BoschApp.WebAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("{alanId}/departmans")]
+        public IActionResult GetDepartmantsByAlan(int alanId)
+        {
+            try
+            {
+                var departmans = _alanBusinessService.GetDepartmantsByAlan(alanId);
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(departmans);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
