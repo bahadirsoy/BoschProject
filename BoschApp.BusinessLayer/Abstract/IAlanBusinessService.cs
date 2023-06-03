@@ -10,5 +10,6 @@ namespace BoschApp.BusinessLayer.Abstract
     public interface IAlanBusinessService
     {
         ICollection<Alan> GetAlans();
+        Alan GetAlan(int alanId);
     }
 }

@@ -21,6 +21,18 @@ namespace BoschApp.BusinessLayer.Concrete
             _rules = rules;
         }
 
+        public Alan GetAlan(int alanId)
+        {
+            if (!_alanRepository.AlanExist(alanId))
+            {
+                throw new Exception("There is no Alan with id: " + alanId);
+            }
+
+            var alan = _alanRepository.GetAlan(alanId);
+
+            return alan;
+        }
+
         public ICollection<Alan> GetAlans()
         {
             var alans = _alanRepository.GetAlans();
