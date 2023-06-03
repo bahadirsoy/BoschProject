@@ -18,6 +18,16 @@ namespace BoschApp.DataAccessLayer.Concrete
             _context = context;
         }
 
+        public bool AlanExist(int alanId)
+        {
+            return _context.Alans.Any(a => a.Id == alanId);
+        }
+
+        public Alan GetAlan(int alanId)
+        {
+            return _context.Alans.Where(a => a.Id == alanId).FirstOrDefault();
+        }
+
         public ICollection<Alan> GetAlans()
         {
             return _context.Alans.ToList();
