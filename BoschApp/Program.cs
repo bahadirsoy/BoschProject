@@ -31,6 +31,8 @@ builder.Services.AddScoped<IAltParcaRepository, AltParcaRepository>();
 builder.Services.AddScoped<IAltParcaBusinessService, AltParcaBusinessService>();
 builder.Services.AddScoped<IEnjektorRepository, EnjektorRepository>();
 builder.Services.AddScoped<IEnjektorBusinessService, EnjektorBusinessService>();
+builder.Services.AddScoped<ISiparisRepository, SiparisRepository>();
+builder.Services.AddScoped<ISiparisBusinessService, SiparisBusinessService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
