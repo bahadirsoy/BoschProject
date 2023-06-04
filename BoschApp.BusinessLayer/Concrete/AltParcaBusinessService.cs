@@ -64,7 +64,7 @@ namespace BoschApp.BusinessLayer.Concrete
 
             if (_rules.IsNull(istasyon))
             {
-                throw new Exception("There is no such istasyon")
+                throw new Exception("There is no such istasyon");
             }
 
             return istasyon;
