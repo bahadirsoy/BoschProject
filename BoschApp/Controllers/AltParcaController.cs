@@ -57,5 +57,25 @@ namespace BoschApp.WebAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("{altParcaId}/Istasyon")]
+        public IActionResult GetIstasyonByAltParca(int altParcaId)
+        {
+            try
+            {
+                var istasyon = _mapper.Map<IstasyonDto>(_altParcaBusinessService.GetIstasyonByAltParca(altParcaId));
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(istasyon);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

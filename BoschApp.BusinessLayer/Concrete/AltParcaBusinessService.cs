@@ -55,7 +55,7 @@ namespace BoschApp.BusinessLayer.Concrete
 
         public Istasyon GetIstasyonByAltParca(int altParcaId)
         {
-            if (_altParcaRepository.AltParcaExist(altParcaId))
+            if (!_altParcaRepository.AltParcaExist(altParcaId))
             {
                 throw new Exception("There is no Istasyon belonging to this altParca with id: " + altParcaId);
             }
