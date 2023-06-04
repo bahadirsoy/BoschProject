@@ -37,5 +37,25 @@ namespace BoschApp.WebAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet()]
+        public IActionResult GetAltParcas()
+        {
+            try
+            {
+                var altParcas = _mapper.Map<List<AltParcaDto>>(_altParcaBusinessService.GetAltParcas());
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(altParcas);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
