@@ -21,17 +21,17 @@ namespace BoschApp.DataAccessLayer.Concrete
 
         public AltParca GetAltParcaByUretim(int uretimId)
         {
-            throw new NotImplementedException();
+            return _context.Uretims.Where(u => u.Id == uretimId).Select(u => u.AltParca).FirstOrDefault();
         }
 
         public Siparis GetSiparisByUretim(int uretimId)
         {
-            throw new NotImplementedException();
+            return _context.Uretims.Where(u => u.Id == uretimId).Select(u => u.Siparis).FirstOrDefault();
         }
 
         public bool UretimExist(int uretimId)
         {
-            throw new NotImplementedException();
+            return _context.Uretims.Any(u => u.Id == uretimId);
         }
     }
 }
