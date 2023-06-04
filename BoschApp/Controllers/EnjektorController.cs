@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BoschApp.BusinessLayer.Abstract;
+using BoschApp.WebAPI.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BoschApp.WebAPI.Controllers
@@ -15,6 +16,26 @@ namespace BoschApp.WebAPI.Controllers
         {
             _enjektorBusinessService = enjektorBusinessService;
             _mapper = mapper;
+        }
+
+        [HttpGet("{enjektorId}/altParca")]
+        public IActionResult GetAltParcasByEnjektor(int enjektorId)
+        {
+            try
+            {
+                var altParcas = _mapper.Map<List<AltParcaDto>>(_enjektorBusinessService.GetAltParcasByEnjektor(enjektorId));
+
+                if(!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(altParcas);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }
