@@ -72,7 +72,7 @@ namespace BoschApp.BusinessLayer.Concrete
 
         public StokAlani GetStokAlaniByAltParca(int altParcaId)
         {
-            if (_altParcaRepository.AltParcaExist(altParcaId))
+            if (!_altParcaRepository.AltParcaExist(altParcaId))
             {
                 throw new Exception("There is no stokAlani belonging to this altParca with id: " + altParcaId);
             }
