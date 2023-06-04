@@ -24,6 +24,7 @@ namespace BoschApp.WebAPI.Helper
             CreateMap<AltParca, AltParcaDto>();
             CreateMap<StokAlani, StokAlaniDto>();
             CreateMap<Siparis, SiparisDto>();
+            CreateMap<SiparisDto, Siparis>();
         }
     }
 }

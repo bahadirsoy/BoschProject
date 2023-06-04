@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BoschApp.BusinessLayer.Abstract;
+using BoschApp.EntityLayer.Entities.SiparisEntity;
 using BoschApp.WebAPI.Dto;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,11 +11,16 @@ namespace BoschApp.WebAPI.Controllers
     public class SiparisController : Controller
     {
         private readonly ISiparisBusinessService _siparisBusinessService;
+        private readonly IEnjektorBusinessService _enjektorBusinessService;
         private readonly IMapper _mapper;
 
-        public SiparisController(ISiparisBusinessService siparisBusinessService, IMapper mapper)
+        public SiparisController(
+            ISiparisBusinessService siparisBusinessService,
+            IEnjektorBusinessService enjektorBusinessService,
+            IMapper mapper)
         {
             _siparisBusinessService = siparisBusinessService;
+            _enjektorBusinessService = enjektorBusinessService;
             _mapper = mapper;
         }
 
@@ -91,6 +97,34 @@ namespace BoschApp.WebAPI.Controllers
                 }
 
                 return Ok(uretims);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        public IActionResult CreateSiparis([FromQuery] int enjektorId, [FromBody] SiparisDto siparis)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                var siparisMap = _mapper.Map<Siparis>(siparis);
+
+                siparisMap.Enjektor = _enjektorBusinessService.GetEnjektor(enjektorId);
+
+                if (!_siparisBusinessService.CreateSiparis(siparisMap))
+                {
+                    ModelState.AddModelError("", "Something went wrong while creating siparis");
+                    return StatusCode(500, ModelState);
+                }
+
+                return Ok("Succesfully added new siparis");
             }
             catch (Exception ex)
             {
