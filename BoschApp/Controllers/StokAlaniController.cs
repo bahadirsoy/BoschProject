@@ -37,5 +37,25 @@ namespace BoschApp.WebAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("{stokAlaniId}")]
+        public IActionResult GetStokAlani(int stokAlaniId)
+        {
+            try
+            {
+                var stokAlani = _mapper.Map<StokAlaniDto>(_stokAlaniBusinessService.GetStokAlani(stokAlaniId));
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(stokAlani);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
