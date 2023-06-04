@@ -33,6 +33,8 @@ builder.Services.AddScoped<IEnjektorRepository, EnjektorRepository>();
 builder.Services.AddScoped<IEnjektorBusinessService, EnjektorBusinessService>();
 builder.Services.AddScoped<ISiparisRepository, SiparisRepository>();
 builder.Services.AddScoped<ISiparisBusinessService, SiparisBusinessService>();
+builder.Services.AddScoped<IUretimRepository, UretimRepository>();
+builder.Services.AddScoped<IUretimBusinessService, UretimBusinessService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
