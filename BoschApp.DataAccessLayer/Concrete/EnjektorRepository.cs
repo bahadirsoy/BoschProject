@@ -22,27 +22,27 @@ namespace BoschApp.DataAccessLayer.Concrete
 
         public bool EnjektorExist(int enjektorId)
         {
-            throw new NotImplementedException();
+            return _context.Enjektors.Any(e => e.Id == enjektorId);
         }
 
         public ICollection<AltParca> GetAltParcasByEnjektor(int enjektorId)
         {
-            throw new NotImplementedException();
+            return _context.EnjektorAltParcas.Where(ea => ea.Enjektor.Id == enjektorId).Select(ea => ea.AltParca).ToList();
         }
 
         public Enjektor GetEnjektor(int enjektorId)
         {
-            throw new NotImplementedException();
+            return _context.Enjektors.Where(e => e.Id == enjektorId).FirstOrDefault();
         }
 
         public ICollection<Enjektor> GetEnjektors()
         {
-            throw new NotImplementedException();
+            return _context.Enjektors.ToList();
         }
 
         public Kisim GetKisimByEnjektor(int enjektorId)
         {
-            throw new NotImplementedException();
+            return _context.Enjektors.Where(e => e.Id == enjektorId).Select(e => e.Kisim).ToList();
         }
     }
 }
