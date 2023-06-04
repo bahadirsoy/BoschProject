@@ -20,6 +20,12 @@ namespace BoschApp.DataAccessLayer.Concrete
             _context = context;
         }
 
+        public bool CreateSiparis(Siparis siparis)
+        {
+            _context.Add(siparis);
+            return Save();
+        }
+
         public Enjektor GetEnjektorBySiparis(int siparisId)
         {
             return _context.Siparises.Where(s => s.Id == siparisId).Select(s => s.Enjektor).FirstOrDefault();
@@ -38,6 +44,12 @@ namespace BoschApp.DataAccessLayer.Concrete
         public ICollection<Uretim> GetUretimsBySiparis(int siparisId)
         {
             return _context.Uretims.Where(u => u.Siparis.Id == siparisId).ToList();
+        }
+
+        public bool Save()
+        {
+            var saved = _context.SaveChanges();
+            return saved > 0 ? true : false;
         }
 
         public bool SiparisExist(int siparisId)

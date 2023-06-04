@@ -24,6 +24,16 @@ namespace BoschApp.BusinessLayer.Concrete
             _rules = rules;
         }
 
+        public bool CreateSiparis(Siparis siparis)
+        {
+            if (_rules.IsNull(siparis))
+            {
+                throw new Exception("There is no siparis to be created");
+            }
+
+            return _siparisRepository.CreateSiparis(siparis);
+        }
+
         public Enjektor GetEnjektorBySiparis(int siparisId)
         {
             if(!_siparisRepository.SiparisExist(siparisId))
