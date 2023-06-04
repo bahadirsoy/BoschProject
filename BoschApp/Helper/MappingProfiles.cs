@@ -8,6 +8,7 @@ using BoschApp.EntityLayer.Entities.IstasyonEntity;
 using BoschApp.EntityLayer.Entities.KisimEntity;
 using BoschApp.EntityLayer.Entities.SiparisEntity;
 using BoschApp.EntityLayer.Entities.StokAlaniEntity;
+using BoschApp.EntityLayer.Entities.UretimEntity;
 using BoschApp.WebAPI.Dto;
 
 namespace BoschApp.WebAPI.Helper
@@ -25,6 +26,8 @@ namespace BoschApp.WebAPI.Helper
             CreateMap<StokAlani, StokAlaniDto>();
             CreateMap<Siparis, SiparisDto>();
             CreateMap<SiparisDto, Siparis>();
+            CreateMap<Uretim, UretimDto>();
+            CreateMap<UretimDto, Uretim>();
         }
     }
 }
