@@ -23,7 +23,14 @@ namespace BoschApp.BusinessLayer.Concrete
 
         public StokAlani GetStokAlani(int stokAlaniId)
         {
-            throw new NotImplementedException();
+            var stokAlani = _stokAlaniRepository.GetStokAlani(stokAlaniId);
+
+            if (_rules.IsNull(stokAlani))
+            {
+                throw new Exception("There is no stok alani with id: " + stokAlaniId);
+            }
+
+            return stokAlani;
         }
 
         public ICollection<StokAlani> GetStokAlanis()
