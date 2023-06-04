@@ -1,5 +1,6 @@
 ﻿using BoschApp.EntityLayer.Entities.AltParcaEntity;
 using BoschApp.EntityLayer.Entities.SiparisEntity;
+using BoschApp.EntityLayer.Entities.UretimEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,7 @@ namespace BoschApp.DataAccessLayer.Abstract
         bool UretimExist(int uretimId);
         Siparis GetSiparisByUretim(int uretimId);
         AltParca GetAltParcaByUretim(int uretimId);
+        bool CreateUretim(Uretim uretim);
+        bool Save();
     }
 }
