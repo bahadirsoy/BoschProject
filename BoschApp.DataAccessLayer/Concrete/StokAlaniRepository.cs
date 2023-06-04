@@ -21,17 +21,17 @@ namespace BoschApp.DataAccessLayer.Concrete
 
         public StokAlani GetStokAlani(int stokAlaniId)
         {
-            throw new NotImplementedException();
+            return _context.StokAlanis.Where(s => s.Id == stokAlaniId).FirstOrDefault();
         }
 
         public ICollection<StokAlani> GetStokAlanis()
         {
-            return _context.StokAlanis.Include(s => s.AltParca).ToList();
+            return _context.StokAlanis.ToList();
         }
 
         public bool StokAlaniExist(int stokAlaniId)
         {
-            throw new NotImplementedException();
+            return _context.StokAlanis.Any(s => s.Id == stokAlaniId);
         }
     }
 }

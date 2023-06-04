@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BoschApp.BusinessLayer.Abstract;
+using BoschApp.WebAPI.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BoschApp.WebAPI.Controllers
@@ -22,7 +23,7 @@ namespace BoschApp.WebAPI.Controllers
         {
             try
             {
-                var stokAlanis = _stokAlaniBusinessService.GetStokAlanis();
+                var stokAlanis = _mapper.Map<List<StokAlaniDto>>(_stokAlaniBusinessService.GetStokAlanis());
 
                 if(!ModelState.IsValid)
                 {
