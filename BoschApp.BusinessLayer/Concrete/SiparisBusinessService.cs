@@ -1,6 +1,7 @@
 ﻿using BoschApp.BusinessLayer.Abstract;
 using BoschApp.BusinessLayer.Rules;
 using BoschApp.DataAccessLayer.Abstract;
+using BoschApp.EntityLayer.Entities.DepartmanEntityEntity;
 using BoschApp.EntityLayer.Entities.EnjektorEntity;
 using BoschApp.EntityLayer.Entities.SiparisEntity;
 using BoschApp.EntityLayer.Entities.UretimEntity;
@@ -25,22 +26,65 @@ namespace BoschApp.BusinessLayer.Concrete
 
         public Enjektor GetEnjektorBySiparis(int siparisId)
         {
-            throw new NotImplementedException();
+            if(!_siparisRepository.SiparisExist(siparisId))
+            {
+                throw new Exception("There is no siparis with id: " + siparisId);
+            }
+
+            var enjektor = _siparisRepository.GetEnjektorBySiparis(siparisId);
+
+            if(_rules.IsNull(enjektor))
+            {
+                throw new Exception("There is no enjektor belonging to this siparis");
+            }
+
+            return enjektor;
         }
 
         public Siparis GetSiparis(int siparisId)
         {
-            throw new NotImplementedException();
+            if (!_siparisRepository.SiparisExist(siparisId))
+            {
+                throw new Exception("There is no siparis with id: " + siparisId);
+            }
+
+            var siparis = _siparisRepository.GetSiparis(siparisId);
+
+            if(_rules.IsNull(siparis))
+            {
+                throw new Exception("There is no siparis");
+            }
+
+            return siparis;
         }
 
         public ICollection<Siparis> GetSiparises()
         {
-            throw new NotImplementedException();
+            var siparises = _siparisRepository.GetSiparises();
+
+            if (_rules.IsNull(siparises))
+            {
+                throw new Exception("There is no siparis");
+            }
+
+            return siparises;
         }
 
         public ICollection<Uretim> GetUretimsBySiparis(int siparisId)
         {
-            throw new NotImplementedException();
+            if (!_siparisRepository.SiparisExist(siparisId))
+            {
+                throw new Exception("There is uretim belonging to this siparis");
+            }
+
+            var uretims = _siparisRepository.GetUretimsBySiparis(siparisId);
+
+            if(_rules.IsNull(uretims)) 
+            {
+                throw new Exception("This siparis has no uretim");
+            }
+
+            return uretims;
         }
     }
 }
