@@ -22,27 +22,27 @@ namespace BoschApp.DataAccessLayer.Concrete
 
         public bool AltParcaExist(int altParcaId)
         {
-            throw new NotImplementedException();
+            return _context.AltParcas.Any(a => a.Id == altParcaId);
         }
 
         public AltParca GetAltParca(int altParcaId)
         {
-            throw new NotImplementedException();
+            return _context.AltParcas.Where(a => a.Id == altParcaId).FirstOrDefault();
         }
 
         public ICollection<AltParca> GetAltParcas()
         {
-            throw new NotImplementedException();
+            return _context.AltParcas.ToList();
         }
 
         public Istasyon GetIstasyonByAltParca(int altParcaId)
         {
-            throw new NotImplementedException();
+            return _context.AltParcas.Where(a => a.Id == altParcaId).Select(a => a.Istasyon).FirstOrDefault();
         }
 
         public StokAlani GetStokAlaniByAltParca(int altParcaId)
         {
-            throw new NotImplementedException();
+            return _context.StokAlanis.Where(s => s.AltParca.Id == altParcaId).FirstOrDefault();
         }
     }
 }
