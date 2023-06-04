@@ -2,6 +2,7 @@
 using BoschApp.BusinessLayer.Rules;
 using BoschApp.DataAccessLayer.Abstract;
 using BoschApp.EntityLayer.Entities.AltParcaEntity;
+using BoschApp.EntityLayer.Entities.DepartmanEntityEntity;
 using BoschApp.EntityLayer.Entities.IstasyonEntity;
 using BoschApp.EntityLayer.Entities.StokAlaniEntity;
 using System;
@@ -25,22 +26,65 @@ namespace BoschApp.BusinessLayer.Concrete
 
         public AltParca GetAltParca(int altParcaId)
         {
-            throw new NotImplementedException();
+            if(!_altParcaRepository.AltParcaExist(altParcaId))
+            {
+                throw new Exception("There is no altParca with id: " + altParcaId);
+            }
+
+            var altParca = _altParcaRepository.GetAltParca(altParcaId);
+
+            if (_rules.IsNull(altParca))
+            {
+                throw new Exception("There is no such altParca");
+            }
+
+            return altParca;
         }
 
         public ICollection<AltParca> GetAltParcas()
         {
-            throw new NotImplementedException();
+            var altParcas = _altParcaRepository.GetAltParcas();
+
+            if (_rules.IsNull(altParcas))
+            {
+                throw new Exception("There is no altParca");
+            }
+
+            return altParcas;
         }
 
         public Istasyon GetIstasyonByAltParca(int altParcaId)
         {
-            throw new NotImplementedException();
+            if (_altParcaRepository.AltParcaExist(altParcaId))
+            {
+                throw new Exception("There is no Istasyon belonging to this altParca with id: " + altParcaId);
+            }
+
+            var istasyon = _altParcaRepository.GetIstasyonByAltParca(altParcaId);
+
+            if (_rules.IsNull(istasyon))
+            {
+                throw new Exception("There is no such istasyon")
+            }
+
+            return istasyon;
         }
 
         public StokAlani GetStokAlaniByAltParca(int altParcaId)
         {
-            throw new NotImplementedException();
+            if (_altParcaRepository.AltParcaExist(altParcaId))
+            {
+                throw new Exception("There is no stokAlani belonging to this altParca with id: " + altParcaId);
+            }
+
+            var stokAlani = _altParcaRepository.GetStokAlaniByAltParca(altParcaId);
+
+            if (_rules.IsNull(stokAlani))
+            {
+                throw new Exception("There is no stokAlani");
+            }
+
+            return stokAlani;
         }
     }
 }
