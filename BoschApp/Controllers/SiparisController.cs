@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BoschApp.BusinessLayer.Abstract;
+using BoschApp.WebAPI.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BoschApp.WebAPI.Controllers
@@ -15,6 +16,26 @@ namespace BoschApp.WebAPI.Controllers
         {
             _siparisBusinessService = siparisBusinessService;
             _mapper = mapper;
+        }
+
+        [HttpGet("{siparisId}/enjektor")]
+        public IActionResult GetEnjektorBySiparis(int siparisId)
+        {
+            try
+            {
+                var enjektor = _mapper.Map<EnjektorDto>(_siparisBusinessService.GetEnjektorBySiparis(siparisId));
+
+                if(!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(enjektor);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }
