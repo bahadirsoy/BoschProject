@@ -37,5 +37,25 @@ namespace BoschApp.WebAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("{siparisId}")]
+        public IActionResult GetSiparis(int siparisId)
+        {
+            try
+            {
+                var siparis = _mapper.Map<SiparisDto>(_siparisBusinessService.GetSiparis(siparisId));
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(siparis);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
