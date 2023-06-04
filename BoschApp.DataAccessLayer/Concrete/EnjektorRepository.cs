@@ -42,7 +42,7 @@ namespace BoschApp.DataAccessLayer.Concrete
 
         public Kisim GetKisimByEnjektor(int enjektorId)
         {
-            return _context.Enjektors.Where(e => e.Id == enjektorId).Select(e => e.Kisim).ToList();
+            return _context.Enjektors.Where(e => e.Id == enjektorId).Select(e => e.Kisim).FirstOrDefault();
         }
     }
 }
