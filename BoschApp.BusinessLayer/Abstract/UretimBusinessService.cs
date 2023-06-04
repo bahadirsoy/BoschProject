@@ -1,6 +1,7 @@
 ﻿using BoschApp.BusinessLayer.Rules;
 using BoschApp.DataAccessLayer.Abstract;
 using BoschApp.EntityLayer.Entities.AltParcaEntity;
+using BoschApp.EntityLayer.Entities.DepartmanEntityEntity;
 using BoschApp.EntityLayer.Entities.SiparisEntity;
 using System;
 using System.Collections.Generic;
@@ -23,12 +24,36 @@ namespace BoschApp.BusinessLayer.Abstract
 
         public AltParca GetAltParcaByUretim(int uretimId)
         {
-            throw new NotImplementedException();
+            if (!_uretimRepository.UretimExist(uretimId))
+            {
+                throw new Exception("There is no uretim with id: " + uretimId);
+            }
+
+            var altParca = _uretimRepository.GetAltParcaByUretim(uretimId);
+
+            if (_rules.IsNull(altParca))
+            {
+                throw new Exception("This uretim has no altParca");
+            }
+
+            return altParca;
         }
 
         public Siparis GetSiparisByUretim(int uretimId)
         {
-            throw new NotImplementedException();
+            if (!_uretimRepository.UretimExist(uretimId))
+            {
+                throw new Exception("There is no uretim with id: " + uretimId);
+            }
+
+            var siparis = _uretimRepository.GetSiparisByUretim(uretimId);
+
+            if (_rules.IsNull(siparis))
+            {
+                throw new Exception("This uretim has no siparis");
+            }
+
+            return siparis;
         }
     }
 }
