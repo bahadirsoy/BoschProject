@@ -57,5 +57,25 @@ namespace BoschApp.WebAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet()]
+        public IActionResult GetEnjektors()
+        {
+            try
+            {
+                var enjektors = _mapper.Map<List<EnjektorDto>>(_enjektorBusinessService.GetEnjektors());
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(enjektors);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
