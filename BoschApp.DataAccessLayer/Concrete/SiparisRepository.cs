@@ -22,7 +22,7 @@ namespace BoschApp.DataAccessLayer.Concrete
 
         public bool CreateSiparis(Siparis siparis)
         {
-            _context.Add(siparis);
+            _context.Siparises.Add(siparis);
             return Save();
         }
 

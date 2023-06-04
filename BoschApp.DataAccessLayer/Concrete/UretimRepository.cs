@@ -2,6 +2,7 @@
 using BoschApp.DataAccessLayer.Data;
 using BoschApp.EntityLayer.Entities.AltParcaEntity;
 using BoschApp.EntityLayer.Entities.SiparisEntity;
+using BoschApp.EntityLayer.Entities.UretimEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,12 @@ namespace BoschApp.DataAccessLayer.Concrete
             _context = context;
         }
 
+        public bool CreateUretim(Uretim uretim)
+        {
+            _context.Uretims.Add(uretim);
+            return Save();
+        }
+
         public AltParca GetAltParcaByUretim(int uretimId)
         {
             return _context.Uretims.Where(u => u.Id == uretimId).Select(u => u.AltParca).FirstOrDefault();
@@ -27,6 +34,12 @@ namespace BoschApp.DataAccessLayer.Concrete
         public Siparis GetSiparisByUretim(int uretimId)
         {
             return _context.Uretims.Where(u => u.Id == uretimId).Select(u => u.Siparis).FirstOrDefault();
+        }
+
+        public bool Save()
+        {
+            var saved = _context.SaveChanges();
+            return saved > 0 ? true : false;
         }
 
         public bool UretimExist(int uretimId)
