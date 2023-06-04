@@ -1,15 +1,17 @@
-﻿using BoschApp.BusinessLayer.Rules;
+﻿using BoschApp.BusinessLayer.Abstract;
+using BoschApp.BusinessLayer.Rules;
 using BoschApp.DataAccessLayer.Abstract;
 using BoschApp.EntityLayer.Entities.AltParcaEntity;
 using BoschApp.EntityLayer.Entities.DepartmanEntityEntity;
 using BoschApp.EntityLayer.Entities.SiparisEntity;
+using BoschApp.EntityLayer.Entities.UretimEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BoschApp.BusinessLayer.Abstract
+namespace BoschApp.BusinessLayer.Concrete
 {
     public class UretimBusinessService : IUretimBusinessService
     {
@@ -20,6 +22,16 @@ namespace BoschApp.BusinessLayer.Abstract
         {
             _uretimRepository = uretimRepository;
             _rules = rules;
+        }
+
+        public bool CreateSiparis(Uretim uretim)
+        {
+            if (_rules.IsNull(uretim))
+            {
+                throw new Exception("There is no uretim to be created");
+            }
+
+            return _uretimRepository.CreateUretim(uretim);
         }
 
         public AltParca GetAltParcaByUretim(int uretimId)

@@ -1,5 +1,6 @@
 ﻿using BoschApp.EntityLayer.Entities.AltParcaEntity;
 using BoschApp.EntityLayer.Entities.SiparisEntity;
+using BoschApp.EntityLayer.Entities.UretimEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,6 @@ namespace BoschApp.BusinessLayer.Abstract
     {
         Siparis GetSiparisByUretim(int uretimId);
         AltParca GetAltParcaByUretim(int uretimId);
+        bool CreateSiparis(Uretim uretim);
     }
 }
