@@ -2,6 +2,7 @@
 {
     public class UretimDto
     {
+        public int Id { get; set; }
         public int UretimDurumu { get; set; }
     }
 }
