@@ -4,6 +4,7 @@ using BoschApp.DataAccessLayer.Abstract;
 using BoschApp.EntityLayer.Entities.DepartmanEntityEntity;
 using BoschApp.EntityLayer.Entities.EnjektorEntity;
 using BoschApp.EntityLayer.Entities.SiparisEntity;
+using BoschApp.EntityLayer.Entities.StokAlaniEntity;
 using BoschApp.EntityLayer.Entities.UretimEntity;
 using System;
 using System.Collections.Generic;
@@ -95,6 +96,26 @@ namespace BoschApp.BusinessLayer.Concrete
             }
 
             return uretims;
+        }
+
+        public bool UpdateSiparis(Siparis siparis, int siparisId)
+        {
+            if (_rules.IsNull(siparis))
+            {
+                throw new Exception("There is no siparis to be updated");
+            }
+
+            if(siparis.Id != siparisId)
+            {
+                throw new Exception("Siparis IDs do not match");
+            }
+
+            if(!_siparisRepository.SiparisExist(siparisId))
+            {
+                throw new Exception("There is no siparis with id: " + siparisId);
+            }
+
+            return _siparisRepository.UpdateSiparis(siparis);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace BoschApp.BusinessLayer.Concrete
 
             if(stokAlaniId != stokAlani.Id)
             {
-                throw new Exception("stokAlani IDs do not match" + stokAlani.Id + " and " + stokAlaniId);
+                throw new Exception("stokAlani IDs do not match");
             }
 
             if (!_stokAlaniRepository.StokAlaniExist(stokAlaniId))
