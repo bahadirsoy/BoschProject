@@ -90,7 +90,7 @@ namespace BoschApp.BusinessLayer.Concrete
 
         public Uretim GetUretim(int uretimId)
         {
-            if (_uretimRepository.UretimExist(uretimId))
+            if (!_uretimRepository.UretimExist(uretimId))
             {
                 throw new Exception("There is no uretim with id: " + uretimId);
             }

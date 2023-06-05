@@ -27,6 +27,26 @@ namespace BoschApp.WebAPI.Controllers
             _mapper = mapper;
         }
 
+        [HttpGet("{uretimId}")]
+        public IActionResult GetUretim(int uretimId)
+        {
+            try
+            {
+                var uretim = _mapper.Map<UretimDto>(_uretimBusinessService.GetUretim(uretimId));
+
+                if(!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(uretim);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpGet("{uretimId}/altparca")]
         public IActionResult GetAltParcaByUretim(int uretimId)
         {
