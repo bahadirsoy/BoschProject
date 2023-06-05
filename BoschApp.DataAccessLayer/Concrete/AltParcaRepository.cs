@@ -44,5 +44,17 @@ namespace BoschApp.DataAccessLayer.Concrete
         {
             return _context.StokAlanis.Where(s => s.AltParca.Id == altParcaId).FirstOrDefault();
         }
+
+        public bool Save()
+        {
+            var saved = _context.SaveChanges();
+            return saved > 0 ? true : false;
+        }
+
+        public bool UpdateAltParca(AltParca altParca)
+        {
+            _context.AltParcas.Update(altParca);
+            return Save();
+        }
     }
 }

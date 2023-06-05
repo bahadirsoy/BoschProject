@@ -16,5 +16,7 @@ namespace BoschApp.DataAccessLayer.Abstract
         AltParca GetAltParca(int altParcaId);
         StokAlani GetStokAlaniByAltParca(int altParcaId);
         Istasyon GetIstasyonByAltParca(int altParcaId);
+        bool UpdateAltParca(AltParca altParca);
+        bool Save();
     }
 }
