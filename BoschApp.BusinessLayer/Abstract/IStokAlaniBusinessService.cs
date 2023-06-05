@@ -11,5 +11,6 @@ namespace BoschApp.BusinessLayer.Abstract
     {
         ICollection<StokAlani> GetStokAlanis();
         StokAlani GetStokAlani(int stokAlaniId);
+        bool UpdateStokAlani(StokAlani stokAlani, int stokAlaniId);
     }
 }

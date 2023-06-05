@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BoschApp.BusinessLayer.Abstract;
+using BoschApp.EntityLayer.Entities.StokAlaniEntity;
 using BoschApp.WebAPI.Dto;
 using Microsoft.AspNetCore.Mvc;
 
@@ -56,6 +57,25 @@ namespace BoschApp.WebAPI.Controllers
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+        [HttpPut("{stokAlaniId}")]
+        public IActionResult UpdateStokAlani(StokAlaniDto stokAlani, int stokAlaniId)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var stokAlaniMap = _mapper.Map<StokAlani>(stokAlani);
+
+            if(!_stokAlaniBusinessService.UpdateStokAlani(stokAlaniMap, stokAlaniId))
+            {
+                ModelState.AddModelError("", "Something went wrong updating stokAlani");
+                return StatusCode(500, ModelState);
+            }
+
+            return Ok("Succesfully updated stokAlani");
         }
     }
 }

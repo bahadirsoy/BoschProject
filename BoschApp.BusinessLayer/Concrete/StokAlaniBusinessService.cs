@@ -1,6 +1,7 @@
 ﻿using BoschApp.BusinessLayer.Abstract;
 using BoschApp.BusinessLayer.Rules;
 using BoschApp.DataAccessLayer.Abstract;
+using BoschApp.EntityLayer.Entities.SiparisEntity;
 using BoschApp.EntityLayer.Entities.StokAlaniEntity;
 using System;
 using System.Collections.Generic;
@@ -43,6 +44,26 @@ namespace BoschApp.BusinessLayer.Concrete
             }
 
             return stokAlanis;
+        }
+
+        public bool UpdateStokAlani(StokAlani stokAlani, int stokAlaniId)
+        {
+            if (_rules.IsNull(stokAlani))
+            {
+                throw new Exception("There is no stokAlani to be updated");
+            }
+
+            if(stokAlaniId != stokAlani.Id)
+            {
+                throw new Exception("stokAlani IDs do not match" + stokAlani.Id + " and " + stokAlaniId);
+            }
+
+            if (!_stokAlaniRepository.StokAlaniExist(stokAlaniId))
+            {
+                throw new Exception("There is no stokAlani with id: " + stokAlaniId);
+            }
+
+            return _stokAlaniRepository.UpdateStokAlani(stokAlani);
         }
     }
 }
