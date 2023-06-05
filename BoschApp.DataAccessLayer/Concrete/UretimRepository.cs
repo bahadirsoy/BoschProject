@@ -44,7 +44,7 @@ namespace BoschApp.DataAccessLayer.Concrete
 
         public Uretim GetUretim(int uretimId)
         {
-            throw new NotImplementedException();
+            return _context.Uretims.Where(u => u.Id == uretimId).FirstOrDefault();
         }
 
         public bool Save()
