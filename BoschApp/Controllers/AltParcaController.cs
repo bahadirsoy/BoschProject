@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BoschApp.BusinessLayer.Abstract;
+using BoschApp.EntityLayer.Entities.AltParcaEntity;
 using BoschApp.WebAPI.Dto;
 using Microsoft.AspNetCore.Mvc;
 
@@ -96,6 +97,25 @@ namespace BoschApp.WebAPI.Controllers
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+        [HttpPut("{altParcaId}")]
+        public IActionResult UpdateAltParca(AltParcaDto altParca, int altParcaId)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var altParcaMap = _mapper.Map<AltParca>(altParca);
+
+            if(!_altParcaBusinessService.UpdateAltParca(altParcaMap, altParcaId))
+            {
+                ModelState.AddModelError("", "Something went wrong updating stokAlani");
+                return StatusCode(500, ModelState);
+            }
+
+            return Ok("Succesfully updated altParca");
         }
     }
 }

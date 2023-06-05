@@ -23,6 +23,7 @@ namespace BoschApp.WebAPI.Helper
             CreateMap<Enjektor, EnjektorDto>();
             CreateMap<Istasyon, IstasyonDto>();
             CreateMap<AltParca, AltParcaDto>();
+            CreateMap<AltParcaDto, AltParca>();
             CreateMap<StokAlani, StokAlaniDto>();
             CreateMap<StokAlaniDto, StokAlani>();
             CreateMap<Siparis, SiparisDto>();
