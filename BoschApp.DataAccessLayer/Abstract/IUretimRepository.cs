@@ -15,6 +15,7 @@ namespace BoschApp.DataAccessLayer.Abstract
         Siparis GetSiparisByUretim(int uretimId);
         AltParca GetAltParcaByUretim(int uretimId);
         bool CreateUretim(Uretim uretim);
+        bool DeleteUretim(Uretim uretim);
         bool Save();
     }
 }

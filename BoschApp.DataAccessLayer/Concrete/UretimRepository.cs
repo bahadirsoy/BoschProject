@@ -26,6 +26,12 @@ namespace BoschApp.DataAccessLayer.Concrete
             return Save();
         }
 
+        public bool DeleteUretim(Uretim uretim)
+        {
+            _context.Uretims.Remove(uretim);
+            return Save();
+        }
+
         public AltParca GetAltParcaByUretim(int uretimId)
         {
             return _context.Uretims.Where(u => u.Id == uretimId).Select(u => u.AltParca).FirstOrDefault();

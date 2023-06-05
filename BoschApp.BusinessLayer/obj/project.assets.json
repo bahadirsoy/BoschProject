@@ -3542,7 +3542,6 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "BoschApp.DataAccessLayer >= 1.0.0",
-      "BoschApp.EntityLayer >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5"
@@ -3581,9 +3580,6 @@
           "projectReferences": {
             "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj": {
               "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj"
-            },
-            "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj": {
-              "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj"
             }
           }
         }

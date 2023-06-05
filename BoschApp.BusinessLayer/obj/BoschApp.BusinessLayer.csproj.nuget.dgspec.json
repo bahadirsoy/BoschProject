@@ -33,9 +33,6 @@
             "projectReferences": {
               "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj": {
                 "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj"
-              },
-              "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj"
               }
             }
           }

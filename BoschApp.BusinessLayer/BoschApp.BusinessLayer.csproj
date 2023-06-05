@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BoschApp.DataAccessLayer\BoschApp.DataAccessLayer.csproj" />
-    <ProjectReference Include="..\BoschApp.EntityLayer\BoschApp.EntityLayer.csproj" />
   </ItemGroup>
 
 </Project>

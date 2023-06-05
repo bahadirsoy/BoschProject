@@ -1277,7 +1277,6 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "BoschApp.DataAccessLayer": "1.0.0",
-          "BoschApp.EntityLayer": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5"
         },
         "compile": {
