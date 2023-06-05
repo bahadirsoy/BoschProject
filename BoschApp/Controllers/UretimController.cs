@@ -112,6 +112,23 @@ namespace BoschApp.WebAPI.Controllers
             return Ok("Succesfully added new uretim");
         }
 
-        
+        [HttpDelete("{uretimId}")]
+        public IActionResult DeleteUretim(int uretimId)
+        {
+            var uretimToDelete = _uretimBusinessService.GetUretim(uretimId);
+
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if(!_uretimBusinessService.DeleteUretim(uretimToDelete, uretimId))
+            {
+                ModelState.AddModelError("", "Something went wrong updating stokAlani");
+                return StatusCode(500, ModelState);
+            }
+
+            return Ok("Succesfully deleted uretim");
+        }
     }
 }

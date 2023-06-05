@@ -49,11 +49,6 @@ namespace BoschApp.BusinessLayer.Concrete
             return _uretimRepository.DeleteUretim(uretim);
         }
 
-        public bool DeleteUretim(Uretim uretim)
-        {
-            throw new NotImplementedException();
-        }
-
         public AltParca GetAltParcaByUretim(int uretimId)
         {
             if (!_uretimRepository.UretimExist(uretimId))
