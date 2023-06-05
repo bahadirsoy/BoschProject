@@ -86,5 +86,25 @@ namespace BoschApp.BusinessLayer.Concrete
 
             return stokAlani;
         }
+
+        public bool UpdateAltParca(AltParca altParca, int altParcaId)
+        {
+            if (_rules.IsNull(altParca))
+            {
+                throw new Exception("There is no altParca to be updated");
+            }
+
+            if(altParca.Id != altParcaId)
+            {
+                throw new Exception("AltParca IDs do not match");
+            }
+
+            if (!_altParcaRepository.AltParcaExist(altParcaId))
+            {
+                throw new Exception("There is no altParca with id: " + altParcaId);
+            }
+
+            return _altParcaRepository.UpdateAltParca(altParca);
+        }
     }
 }
