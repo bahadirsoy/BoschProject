@@ -29,9 +29,21 @@ namespace BoschApp.DataAccessLayer.Concrete
             return _context.StokAlanis.ToList();
         }
 
+        public bool Save()
+        {
+            var saved = _context.SaveChanges();
+            return saved > 0 ? true : false;
+        }
+
         public bool StokAlaniExist(int stokAlaniId)
         {
             return _context.StokAlanis.Any(s => s.Id == stokAlaniId);
+        }
+
+        public bool UpdateStokAlani(StokAlani stokAlani)
+        {
+            _context.StokAlanis.Update(stokAlani);
+            return Save();
         }
     }
 }

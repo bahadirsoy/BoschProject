@@ -12,5 +12,7 @@ namespace BoschApp.DataAccessLayer.Abstract
         ICollection<StokAlani> GetStokAlanis();
         bool StokAlaniExist(int stokAlaniId);
         StokAlani GetStokAlani(int stokAlaniId);
+        bool UpdateStokAlani(StokAlani stokAlani);
+        bool Save();
     }
 }
