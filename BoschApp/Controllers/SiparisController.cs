@@ -131,5 +131,24 @@ namespace BoschApp.WebAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPut("{siparisId}")]
+        public IActionResult UpdateSiparis(SiparisDto siparis, int siparisId)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var siparisMap = _mapper.Map<Siparis>(siparis);
+
+            if(!_siparisBusinessService.UpdateSiparis(siparisMap, siparisId))
+            {
+                ModelState.AddModelError("", "Something went wrong updating stokAlani");
+                return StatusCode(500, ModelState);
+            }
+
+            return Ok("Succesfully updated siparis");
+        }
     }
 }
