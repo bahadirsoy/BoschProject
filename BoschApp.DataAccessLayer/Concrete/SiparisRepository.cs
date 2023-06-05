@@ -56,5 +56,11 @@ namespace BoschApp.DataAccessLayer.Concrete
         {
             return _context.Siparises.Any(s => s.Id == siparisId);
         }
+
+        public bool UpdateSiparis(Siparis siparis)
+        {
+            _context.Siparises.Update(siparis);
+            return Save();
+        }
     }
 }
