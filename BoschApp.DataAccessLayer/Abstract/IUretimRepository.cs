@@ -11,6 +11,7 @@ namespace BoschApp.DataAccessLayer.Abstract
 {
     public interface IUretimRepository
     {
+        Uretim GetUretim(int uretimId);
         bool UretimExist(int uretimId);
         Siparis GetSiparisByUretim(int uretimId);
         AltParca GetAltParcaByUretim(int uretimId);

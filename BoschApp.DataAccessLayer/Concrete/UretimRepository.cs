@@ -42,6 +42,11 @@ namespace BoschApp.DataAccessLayer.Concrete
             return _context.Uretims.Where(u => u.Id == uretimId).Select(u => u.Siparis).FirstOrDefault();
         }
 
+        public Uretim GetUretim(int uretimId)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Save()
         {
             var saved = _context.SaveChanges();

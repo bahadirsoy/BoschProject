@@ -11,6 +11,7 @@ namespace BoschApp.BusinessLayer.Abstract
 {
     public interface IUretimBusinessService
     {
+        Uretim GetUretim(int uretimId);
         Siparis GetSiparisByUretim(int uretimId);
         AltParca GetAltParcaByUretim(int uretimId);
         bool CreateSiparis(Uretim uretim);

@@ -91,5 +91,7 @@ namespace BoschApp.WebAPI.Controllers
 
             return Ok("Succesfully added new uretim");
         }
+
+        
     }
 }
