@@ -8,4 +8,8 @@ import { HttpClient } from '@angular/common/http';
 export class DepartmanService {
 
   constructor(private http: HttpClient) { }
+
+  getDepartmans(): Observable<any> {
+    return this.http.get<any>("https://localhost:7232/api/Alan");
+  }
 }
