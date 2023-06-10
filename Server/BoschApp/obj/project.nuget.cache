@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XFGH3wlDjGL9yA9syQb6275EWgZ9uHYXnP9DSR4T6hum7o99VTuAwmiHzDX4kd066IH+3Mo4K3TtACk7bF665A==",
+  "dgSpecHash": "zt1409kS6BvQj9MhLSm/35QVIYsn4bo20ZYm2weqY5/pHgikLNBaEu0bgSqwTjt8n8Pdc44ffn7tFua3HhWFDg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp\\BoschApp.WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp\\BoschApp.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oxika\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\oxika\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

@@ -3516,11 +3516,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj",
+      "projectUniqueName": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj",
       "projectName": "BoschApp.EntityLayer",
-      "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj",
+      "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj",
       "packagesPath": "C:\\Users\\oxika\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.EntityLayer\\obj\\",
+      "outputPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.EntityLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

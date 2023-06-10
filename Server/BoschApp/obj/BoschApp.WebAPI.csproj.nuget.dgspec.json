@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp\\BoschApp.WebAPI.csproj": {}
+    "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp\\BoschApp.WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.BusinessLayer\\BoschApp.BusinessLayer.csproj": {
+    "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.BusinessLayer\\BoschApp.BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.BusinessLayer\\BoschApp.BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.BusinessLayer\\BoschApp.BusinessLayer.csproj",
         "projectName": "BoschApp.BusinessLayer",
-        "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.BusinessLayer\\BoschApp.BusinessLayer.csproj",
+        "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.BusinessLayer\\BoschApp.BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\oxika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.BusinessLayer\\obj\\",
+        "outputPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,8 +31,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj"
+              "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj"
               }
             }
           }
@@ -84,14 +84,14 @@
         }
       }
     },
-    "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj": {
+    "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj",
         "projectName": "BoschApp.DataAccessLayer",
-        "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.DataAccessLayer\\BoschApp.DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\oxika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -111,8 +111,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj"
+              "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj"
               }
             }
           }
@@ -164,14 +164,14 @@
         }
       }
     },
-    "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj": {
+    "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj",
         "projectName": "BoschApp.EntityLayer",
-        "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj",
+        "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.EntityLayer\\BoschApp.EntityLayer.csproj",
         "packagesPath": "C:\\Users\\oxika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.EntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -240,14 +240,14 @@
         }
       }
     },
-    "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp\\BoschApp.WebAPI.csproj": {
+    "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp\\BoschApp.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp\\BoschApp.WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp\\BoschApp.WebAPI.csproj",
         "projectName": "BoschApp.WebAPI",
-        "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp\\BoschApp.WebAPI.csproj",
+        "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp\\BoschApp.WebAPI.csproj",
         "packagesPath": "C:\\Users\\oxika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp\\obj\\",
+        "outputPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -267,8 +267,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.BusinessLayer\\BoschApp.BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Client\\BoschApp.BusinessLayer\\BoschApp.BusinessLayer.csproj"
+              "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.BusinessLayer\\BoschApp.BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\oxika\\source\\repos\\BoschApp\\Server\\BoschApp.BusinessLayer\\BoschApp.BusinessLayer.csproj"
               }
             }
           }
