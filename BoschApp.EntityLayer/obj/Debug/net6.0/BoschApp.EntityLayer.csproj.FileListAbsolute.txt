@@ -12,3 +12,17 @@ C:\Users\oxika\source\repos\BoschApp\BoschApp.EntityLayer\obj\Debug\net6.0\refin
 C:\Users\oxika\source\repos\BoschApp\BoschApp.EntityLayer\obj\Debug\net6.0\BoschApp.EntityLayer.pdb
 C:\Users\oxika\source\repos\BoschApp\BoschApp.EntityLayer\obj\Debug\net6.0\BoschApp.EntityLayer.genruntimeconfig.cache
 C:\Users\oxika\source\repos\BoschApp\BoschApp.EntityLayer\obj\Debug\net6.0\ref\BoschApp.EntityLayer.dll
+C:\Users\oxika\source\repos\BoschApp\Client\BoschApp.EntityLayer\bin\Debug\net6.0\BoschApp.EntityLayer.deps.json
+C:\Users\oxika\source\repos\BoschApp\Client\BoschApp.EntityLayer\bin\Debug\net6.0\BoschApp.EntityLayer.runtimeconfig.json
+C:\Users\oxika\source\repos\BoschApp\Client\BoschApp.EntityLayer\bin\Debug\net6.0\BoschApp.EntityLayer.dll
+C:\Users\oxika\source\repos\BoschApp\Client\BoschApp.EntityLayer\bin\Debug\net6.0\BoschApp.EntityLayer.pdb
+C:\Users\oxika\source\repos\BoschApp\Client\BoschApp.EntityLayer\obj\Debug\net6.0\BoschApp.EntityLayer.csproj.AssemblyReference.cache
+C:\Users\oxika\source\repos\BoschApp\Client\BoschApp.EntityLayer\obj\Debug\net6.0\BoschApp.EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oxika\source\repos\BoschApp\Client\BoschApp.EntityLayer\obj\Debug\net6.0\BoschApp.EntityLayer.AssemblyInfoInputs.cache
+C:\Users\oxika\source\repos\BoschApp\Client\BoschApp.EntityLayer\obj\Debug\net6.0\BoschApp.EntityLayer.AssemblyInfo.cs
+C:\Users\oxika\source\repos\BoschApp\Client\BoschApp.EntityLayer\obj\Debug\net6.0\BoschApp.EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\oxika\source\repos\BoschApp\Client\BoschApp.EntityLayer\obj\Debug\net6.0\BoschApp.EntityLayer.dll
+C:\Users\oxika\source\repos\BoschApp\Client\BoschApp.EntityLayer\obj\Debug\net6.0\refint\BoschApp.EntityLayer.dll
+C:\Users\oxika\source\repos\BoschApp\Client\BoschApp.EntityLayer\obj\Debug\net6.0\BoschApp.EntityLayer.pdb
+C:\Users\oxika\source\repos\BoschApp\Client\BoschApp.EntityLayer\obj\Debug\net6.0\BoschApp.EntityLayer.genruntimeconfig.cache
+C:\Users\oxika\source\repos\BoschApp\Client\BoschApp.EntityLayer\obj\Debug\net6.0\ref\BoschApp.EntityLayer.dll
