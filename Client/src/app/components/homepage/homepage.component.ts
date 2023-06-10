@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DepartmanService } from 'src/app/services/departman.service';
 
 @Component({
   selector: 'app-homepage',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
+  
+  constructor() {
 
+  }
+
+  ngOnInit(): void {
+  }
 }
