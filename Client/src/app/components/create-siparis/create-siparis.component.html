@@ -3,9 +3,10 @@
     <div class="col-3">
 
     </div>
+
     <div class="col-6">
       <h2>New order form</h2>
-      <form class="example-form">
+      <form class="example-form" (ngSubmit)="onSubmit()">
         <mat-form-field class="example-full-width" style="width: 100%;">
           <mat-label>Enjektör Id</mat-label>
           <input [(ngModel)]="id" type="number" name="id" id="id" matInput placeholder="Ex: 1">
@@ -15,8 +16,13 @@
           <mat-label>Adet</mat-label>
           <input [(ngModel)]="adet" type="number" name="adet" id="adet" matInput placeholder="Ex: 1">
         </mat-form-field>
+
+        <div class="d-flex justify-content-center">
+            <input type="submit" value="Submit Order" class="btn btn-primary">
+        </div>
       </form>
     </div>
+
     <div class="col-3">
 
     </div>

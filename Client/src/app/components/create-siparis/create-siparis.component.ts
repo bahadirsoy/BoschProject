@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class CreateSiparisComponent {
   id!: number;
   adet!: number;
+
+  onSubmit() {
+    console.log("submitted");
+  }
 }
