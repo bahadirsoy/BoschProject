@@ -11,6 +11,8 @@ export class CreateSiparisComponent {
   id!: number;
   adet!: number;
 
+  alertDisplay: string = 'none';
+
   constructor(private httpService: BoschService) {
 
   }
