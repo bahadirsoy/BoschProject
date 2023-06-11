@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { AltParcaStok } from '../models/AltParcaStok';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class BoschService {
 
   constructor(private http: HttpClient) { }
 
-  getAltParcaStoks(): Observable<any> {
-    return this.http.get<any>(this.apiUrl + "AltParca");
+  getAltParcaStoks(): Observable<AltParcaStok[]> {
+    return this.http.get<AltParcaStok[]>(this.apiUrl + "AltParca");
   }
 }

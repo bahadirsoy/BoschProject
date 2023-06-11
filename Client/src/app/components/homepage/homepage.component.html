@@ -1,21 +1,27 @@
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th scope="col">#</th>
-			<th scope="col">Country</th>
-			<th scope="col">Area</th>
-			<th scope="col">Population</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th scope="row">1</th>
-			<td>
-				tr
-			</td>
-			<td>12</td>
-			<td>555</td>
-		</tr>
-	</tbody>
-</table>
-<p *ngFor="let altParca of altParcaStoks">a</p>
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="mt-5">AltParca Informations</h2>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Masraf</th>
+                    <th scope="col">Stok Adeti</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let altParca of altParcaStoks">
+                    <th scope="row">{{ altParca.id }}</th>
+                    <td>{{ altParca.name }}</td>
+                    <td>{{ altParca.masraf }}</td>
+                    <td>{{ altParca.stokAlanis[0].stokAdeti }}</td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AltParcaStok } from 'src/app/models/AltParcaStok';
 import { BoschService } from 'src/app/services/bosch.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { BoschService } from 'src/app/services/bosch.service';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
-  altParcaStoks: any = [];
+  altParcaStoks: AltParcaStok[] = [];
   
   constructor(private httpService: BoschService) {
 
