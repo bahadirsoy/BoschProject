@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-siparis.component.css']
 })
 export class CreateSiparisComponent {
-
+  id!: number;
+  adet!: number;
 }

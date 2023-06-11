@@ -7,8 +7,13 @@
       <h2>New order form</h2>
       <form class="example-form">
         <mat-form-field class="example-full-width" style="width: 100%;">
-          <mat-label>Email</mat-label>
-          <input type="number" matInput placeholder="Ex. pat@example.com">
+          <mat-label>Enjektör Id</mat-label>
+          <input [(ngModel)]="id" type="number" name="id" id="id" matInput placeholder="Ex: 1">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" style="width: 100%;">
+          <mat-label>Adet</mat-label>
+          <input [(ngModel)]="adet" type="number" name="adet" id="adet" matInput placeholder="Ex: 1">
         </mat-form-field>
       </form>
     </div>
