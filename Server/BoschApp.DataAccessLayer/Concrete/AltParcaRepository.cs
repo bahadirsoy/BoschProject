@@ -33,7 +33,7 @@ namespace BoschApp.DataAccessLayer.Concrete
 
         public ICollection<AltParca> GetAltParcas()
         {
-            return _context.AltParcas.ToList();
+            return _context.AltParcas.Include(a => a.StokAlanis).ToList();
         }
 
         public Istasyon GetIstasyonByAltParca(int altParcaId)

@@ -44,7 +44,7 @@ namespace BoschApp.WebAPI.Controllers
         {
             try
             {
-                var altParcas = _mapper.Map<List<AltParcaDto>>(_altParcaBusinessService.GetAltParcas());
+                var altParcas = _altParcaBusinessService.GetAltParcas();
 
                 if (!ModelState.IsValid)
                 {
