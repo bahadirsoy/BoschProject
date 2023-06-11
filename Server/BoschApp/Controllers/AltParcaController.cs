@@ -84,7 +84,7 @@ namespace BoschApp.WebAPI.Controllers
         {
             try
             {
-                var stokAlani = _mapper.Map<StokAlaniDto>(_altParcaBusinessService.GetStokAlaniByAltParca(altParcaId));
+                var stokAlani = _altParcaBusinessService.GetStokAlaniByAltParca(altParcaId);
 
                 if (!ModelState.IsValid)
                 {

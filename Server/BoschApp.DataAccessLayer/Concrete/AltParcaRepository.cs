@@ -3,6 +3,7 @@ using BoschApp.DataAccessLayer.Data;
 using BoschApp.EntityLayer.Entities.AltParcaEntity;
 using BoschApp.EntityLayer.Entities.IstasyonEntity;
 using BoschApp.EntityLayer.Entities.StokAlaniEntity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +43,8 @@ namespace BoschApp.DataAccessLayer.Concrete
 
         public StokAlani GetStokAlaniByAltParca(int altParcaId)
         {
-            return _context.StokAlanis.Where(s => s.AltParca.Id == altParcaId).FirstOrDefault();
+            return _context.StokAlanis.Where(s => s.AltParca.Id == altParcaId).Include(s => s.AltParca).FirstOrDefault();
+            //return _context.StokAlanis.Where(s => s.AltParca.Id == altParcaId).FirstOrDefault();
         }
 
         public bool Save()
