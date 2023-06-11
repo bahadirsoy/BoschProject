@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DepartmanService } from 'src/app/services/departman.service';
 
 @Component({
   selector: 'app-homepage',
@@ -13,5 +12,6 @@ export class HomepageComponent {
   }
 
   ngOnInit(): void {
+    
   }
 }

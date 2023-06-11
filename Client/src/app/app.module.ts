@@ -14,13 +14,11 @@ import {MatSliderModule} from '@angular/material/slider';
 
 //angular bootstrap modules
 import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
-import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent,
-    TableComponent
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
