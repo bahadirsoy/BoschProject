@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Siparis } from 'src/app/models/Siparis';
 import { BoschService } from 'src/app/services/bosch.service';
 
 @Component({
@@ -15,12 +16,13 @@ export class CreateSiparisComponent {
   }
 
   onSubmit() {
-    const newSiparis = {
-      id: this.id,
-      adet: this.adet,
-      siparisDurumu: 0
+    const newSiparis: Siparis = {
+      Adet: this.adet,
+      SiparisDurumu: 0
     }
 
-    
+    this.httpService.createSiparis(newSiparis, this.id).subscribe((siparis) => {
+      console.log(siparis);
+    })
   }
 }

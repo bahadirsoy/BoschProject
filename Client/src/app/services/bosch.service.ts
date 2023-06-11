@@ -16,7 +16,7 @@ export class BoschService {
     return this.http.get<AltParcaStok[]>(this.apiUrl + "AltParca");
   }
 
-  createSiparis(siparis: Siparis): Observable<Siparis> {
-    return this.http.post<Siparis>(this.apiUrl + "Siparis", siparis);
+  createSiparis(siparis: Siparis, enjektorId: number) {
+    return this.http.post(this.apiUrl + "Siparis?enjektorId=" + enjektorId, siparis, {responseType: 'text'});
   }
 }
