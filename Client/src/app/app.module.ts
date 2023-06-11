@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 //angular material modules
 import {MatCardModule} from '@angular/material/card';
@@ -41,7 +42,8 @@ const appRoutes: Routes = [
     NgbAlertModule,
     MatInputModule,
     MatSliderModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: false})
+    RouterModule.forRoot(appRoutes, {enableTracing: false}),
+    FormsModule
   ],
   exports: [RouterModule],
   providers: [],
