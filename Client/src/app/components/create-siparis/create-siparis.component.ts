@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BoschService } from 'src/app/services/bosch.service';
 
 @Component({
   selector: 'app-create-siparis',
@@ -9,7 +10,17 @@ export class CreateSiparisComponent {
   id!: number;
   adet!: number;
 
+  constructor(private httpService: BoschService) {
+
+  }
+
   onSubmit() {
-    console.log("submitted");
+    const newSiparis = {
+      id: this.id,
+      adet: this.adet,
+      siparisDurumu: 0
+    }
+
+    
   }
 }
