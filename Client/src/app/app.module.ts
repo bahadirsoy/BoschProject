@@ -21,7 +21,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { CreateSiparisComponent } from './components/create-siparis/create-siparis.component';
 
 const appRoutes: Routes = [
-  {path: '', component: HomepageComponent}
+  {path: '', component: HomepageComponent},
+  {path: 'createSiparis', component: CreateSiparisComponent}
 ]
 
 @NgModule({
@@ -40,8 +41,9 @@ const appRoutes: Routes = [
     NgbAlertModule,
     MatInputModule,
     MatSliderModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: true})
+    RouterModule.forRoot(appRoutes, {enableTracing: false})
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
