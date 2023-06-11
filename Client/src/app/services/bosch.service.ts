@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AltParcaStok } from '../models/AltParcaStok';
+import { Siparis } from '../models/Siparis'
 
 @Injectable({
   providedIn: 'root'
@@ -15,5 +16,7 @@ export class BoschService {
     return this.http.get<AltParcaStok[]>(this.apiUrl + "AltParca");
   }
 
-  
+  createSiparis(siparis: Siparis): Observable<Siparis> {
+    return this.http.post<Siparis>(this.apiUrl + "Siparis", siparis);
+  }
 }
