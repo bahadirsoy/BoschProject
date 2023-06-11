@@ -14,4 +14,6 @@ export class BoschService {
   getAltParcaStoks(): Observable<AltParcaStok[]> {
     return this.http.get<AltParcaStok[]>(this.apiUrl + "AltParca");
   }
+
+  
 }
