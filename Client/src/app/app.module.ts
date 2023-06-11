@@ -13,7 +13,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSliderModule} from '@angular/material/slider';
 
 //angular bootstrap modules
-import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAlertModule, NgbNav } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
