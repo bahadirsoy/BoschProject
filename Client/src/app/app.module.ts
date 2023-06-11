@@ -1,11 +1,9 @@
+//modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
-import { AppComponent } from './app.component';
-import { HomepageComponent } from './components/homepage/homepage.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
 
 //angular material modules
 import {MatCardModule} from '@angular/material/card';
@@ -14,13 +12,24 @@ import {MatSliderModule} from '@angular/material/slider';
 
 //angular bootstrap modules
 import { NgbAlertModule, NgbNav } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+//components
+import { AppComponent } from './app.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CreateSiparisComponent } from './components/create-siparis/create-siparis.component';
+
+const appRoutes: Routes = [
+  {path: '', component: HomepageComponent}
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    HeaderComponent
+    HeaderComponent,
+    CreateSiparisComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +39,8 @@ import { HeaderComponent } from './components/header/header.component';
     MatCardModule,
     NgbAlertModule,
     MatInputModule,
-    MatSliderModule
+    MatSliderModule,
+    RouterModule.forRoot(appRoutes, {enableTracing: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
