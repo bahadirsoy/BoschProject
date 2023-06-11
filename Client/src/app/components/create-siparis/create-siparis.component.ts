@@ -24,7 +24,7 @@ export class CreateSiparisComponent {
     }
 
     this.httpService.createSiparis(newSiparis, this.id).subscribe((siparis) => {
-      console.log(siparis);
+      this.alertDisplay = '';
     })
   }
 }
