@@ -28,4 +28,8 @@ export class BoschService {
   getIstasyons(): Observable<Istasyon[]> {
     return this.http.get<Istasyon[]>(this.apiUrl + "Istasyon");
   }
+
+  getAltParcasAndStokAlaniByIstasyon(istasyonId: number) {
+    return this.http.get(this.apiUrl + "Istasyon/" + istasyonId + "/AltParcasAndStokAlani");
+  }
 }

@@ -17,7 +17,7 @@ export class ManufactureComponent {
   ngOnInit(): void {
     this.httpService.getSiparisAndEnjektors().subscribe((siparisAndEnjektors) => {
       this.siparisAndEnjektors = siparisAndEnjektors;
-      console.log(siparisAndEnjektors);
+      ///console.log(siparisAndEnjektors);
     })
   }
 }

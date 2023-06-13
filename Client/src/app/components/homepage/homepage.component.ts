@@ -17,7 +17,7 @@ export class HomepageComponent {
   ngOnInit(): void {
     this.httpService.getAltParcaStoks().subscribe((altParcaStoks) => {
       this.altParcaStoks = altParcaStoks;
-      console.log(this.altParcaStoks);
+      //console.log(this.altParcaStoks);
     });
   }
 }
