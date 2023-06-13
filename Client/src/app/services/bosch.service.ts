@@ -23,4 +23,8 @@ export class BoschService {
   getSiparisAndEnjektors() {
     return this.http.get(this.apiUrl + "Siparis/siparisAndEnjektors");
   }
+
+  getIstasyons() {
+    return this.http.get(this.apiUrl + "Istasyon");
+  }
 }
