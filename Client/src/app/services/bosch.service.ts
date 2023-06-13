@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AltParcaStok } from '../models/AltParcaStok';
 import { Siparis } from '../models/Siparis'
+import { Istasyon } from '../models/Istasyon';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class BoschService {
     return this.http.get(this.apiUrl + "Siparis/siparisAndEnjektors");
   }
 
-  getIstasyons() {
-    return this.http.get(this.apiUrl + "Istasyon");
+  getIstasyons(): Observable<Istasyon[]> {
+    return this.http.get<Istasyon[]>(this.apiUrl + "Istasyon");
   }
 }
