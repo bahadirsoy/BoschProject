@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BoschApp.BusinessLayer.Abstract;
 using BoschApp.EntityLayer.Entities.AltParcaEntity;
+using BoschApp.EntityLayer.Entities.IstasyonEntity;
 using BoschApp.WebAPI.Dto;
 using Microsoft.AspNetCore.Mvc;
 
@@ -76,6 +77,26 @@ namespace BoschApp.WebAPI.Controllers
             catch(Exception ex)
             {
                 return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("{istasyonId}/AltParcasAndStokAlani")]
+        public IActionResult GetAltParcasAndStokAlani(int istasyonId)
+        {
+            try
+            {
+                var altParcasAndStokAlani = _istasyonBusinessService.GetAltParcasAndStokAlaniByIstasyon(istasyonId);
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(altParcasAndStokAlani);
+            }
+            catch 
+            {
+                return BadRequest(ModelState);
             }
         }
     }

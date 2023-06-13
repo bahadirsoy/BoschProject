@@ -20,7 +20,7 @@ namespace BoschApp.DataAccessLayer.Concrete
             _context = context;
         }
 
-        public ICollection<AltParca> GetAltParcaAndStokAlaniByIstasyon(int istasyonId)
+        public ICollection<AltParca> GetAltParcasAndStokAlaniByIstasyon(int istasyonId)
         {
             return _context.AltParcas.Where(a => a.Istasyon.Id == istasyonId).Include(a => a.StokAlanis).ToList();
         }

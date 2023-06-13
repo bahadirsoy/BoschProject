@@ -13,6 +13,6 @@ namespace BoschApp.BusinessLayer.Abstract
         ICollection<Istasyon> GetIstasyons();
         Istasyon GetIstasyon(int istasyonId);
         ICollection<AltParca> GetAltParcasByIstasyon(int istasyonId);
-        ICollection<AltParca> GetAltParcaAndStokAlaniByIstasyon(int istasyonId);
+        ICollection<AltParca> GetAltParcasAndStokAlaniByIstasyon(int istasyonId);
     }
 }
