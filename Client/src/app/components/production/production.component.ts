@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { BoschService } from 'src/app/services/bosch.service';
 
 @Component({
   selector: 'app-production',
@@ -10,11 +11,15 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductionComponent {
   id!: string;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private httpService: BoschService) {
 
   }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id') as string;
+   
+    this.httpService.getIstasyons().subscribe((istasyons) => {
+      console.log(istasyons);
+    })
   }
 }
