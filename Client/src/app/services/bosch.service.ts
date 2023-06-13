@@ -20,7 +20,7 @@ export class BoschService {
     return this.http.post(this.apiUrl + "Siparis?enjektorId=" + enjektorId, siparis, {responseType: 'text'});
   }
 
-  getSiparisAndEnjektor(siparisId: number) {
-    return this.http.get(this.apiUrl + `Siparis/${siparisId}/siparisAndEnjektor`);
+  getSiparisAndEnjektors() {
+    return this.http.get(this.apiUrl + "Siparis/siparisAndEnjektors");
   }
 }

@@ -1,23 +1,27 @@
 <div class="container">
     <div class="row">
       <div class="col">
-        <h2 class="mt-5">AltParca Informations</h2>
+        <h2 class="mt-5">Siparis Informations</h2>
 
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Masraf</th>
-                    <th scope="col">Stok Adeti</th>
+                    <th scope="col">Siparis Id</th>
+                    <th scope="col">Adet</th>
+                    <th scope="col">Enjektor Id</th>
+                    <th scope="col">Model No</th>
+                    <th scope="col">Tür</th>
+                    <th scope="col">Button</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>5</td>
-                    <td>5</td>
-                    <td>5</td>
+                <tr *ngFor="let siparisAndEnjektor of siparisAndEnjektors">
+                    <th scope="row"> {{siparisAndEnjektor.id}} </th>
+                    <td> {{siparisAndEnjektor.adet}} </td>
+                    <td> {{siparisAndEnjektor.enjektor.id}} </td>
+                    <td> {{siparisAndEnjektor.enjektor.modelNo}} </td>
+                    <td> {{siparisAndEnjektor.enjektor.tur}} </td>
+                    <td>Button</td>
                 </tr>
             </tbody>
         </table>
