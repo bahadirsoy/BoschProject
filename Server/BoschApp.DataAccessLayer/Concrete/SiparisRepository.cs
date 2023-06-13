@@ -37,9 +37,9 @@ namespace BoschApp.DataAccessLayer.Concrete
             return _context.Siparises.Where(s => s.Id == siparisId).FirstOrDefault();
         }
 
-        public ICollection<Siparis> GetSiparisAndEnjektor(int siparisId)
+        public ICollection<Siparis> GetSiparisAndEnjektors()
         {
-            return _context.Siparises.Where(s => s.Id == siparisId).Include(s => s.Enjektor).ToList();
+            return _context.Siparises.Include(s => s.Enjektor).ToList();
         }
 
         public ICollection<Siparis> GetSiparises()

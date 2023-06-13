@@ -105,19 +105,19 @@ namespace BoschApp.WebAPI.Controllers
             }
         }
 
-        [HttpGet("{siparisId}/siparisAndEnjektor")]
-        public IActionResult GetSiparisAndEnjektor(int siparisId)
+        [HttpGet("siparisAndEnjektors")]
+        public IActionResult GetSiparisAndEnjektors()
         {
             try
             {
-                var siparisAndEnjektor = _siparisBusinessService.GetSiparisAndEnjektor(siparisId);
+                var siparisAndEnjektors = _siparisBusinessService.GetSiparisAndEnjektors();
 
                 if (!ModelState.IsValid)
                 {
                     return BadRequest(ModelState);
                 }
 
-                return Ok(siparisAndEnjektor);
+                return Ok(siparisAndEnjektors);
             } 
             catch (Exception ex)
             {

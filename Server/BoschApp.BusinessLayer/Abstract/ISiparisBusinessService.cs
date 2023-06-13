@@ -15,7 +15,7 @@ namespace BoschApp.BusinessLayer.Abstract
         Siparis GetSiparis(int siparisId);
         Enjektor GetEnjektorBySiparis(int siparisId);
         ICollection<Uretim> GetUretimsBySiparis(int siparisId);
-        ICollection<Siparis> GetSiparisAndEnjektor(int siparisId);
+        ICollection<Siparis> GetSiparisAndEnjektors();
         bool CreateSiparis(Siparis siparis);
         bool UpdateSiparis(Siparis siparis, int siparisId);
     }
