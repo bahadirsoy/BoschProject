@@ -13,6 +13,7 @@ namespace BoschApp.DataAccessLayer.Abstract
         ICollection<Istasyon> GetIstasyons();
         bool IstasyonExist(int istasyonId);
         Istasyon GetIstasyon(int istasyonId);
+        ICollection<AltParca> GetAltParcaAndStokAlaniByIstasyon(int istasyonId);
         ICollection<AltParca> GetAltParcasByIstasyon(int istasyonId);
     }
 }

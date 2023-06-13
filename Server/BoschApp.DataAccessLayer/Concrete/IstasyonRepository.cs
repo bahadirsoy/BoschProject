@@ -2,6 +2,7 @@
 using BoschApp.DataAccessLayer.Data;
 using BoschApp.EntityLayer.Entities.AltParcaEntity;
 using BoschApp.EntityLayer.Entities.IstasyonEntity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,11 @@ namespace BoschApp.DataAccessLayer.Concrete
         public IstasyonRepository(DataContext context)
         {
             _context = context;
+        }
+
+        public ICollection<AltParca> GetAltParcaAndStokAlaniByIstasyon(int istasyonId)
+        {
+            return _context.AltParcas.Where(a => a.Istasyon.Id == istasyonId).Include(a => a.StokAlanis).ToList();
         }
 
         public ICollection<AltParca> GetAltParcasByIstasyon(int istasyonId)
