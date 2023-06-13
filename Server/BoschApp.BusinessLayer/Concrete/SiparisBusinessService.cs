@@ -69,6 +69,23 @@ namespace BoschApp.BusinessLayer.Concrete
             return siparis;
         }
 
+        public ICollection<Siparis> GetSiparisAndEnjektor(int siparisId)
+        {
+            if (!_siparisRepository.SiparisExist(siparisId))
+            {
+                throw new Exception("There is no siparis with id: " + siparisId);
+            }
+
+            var siparisAndEnjektor = _siparisRepository.GetSiparisAndEnjektor(siparisId);
+
+            if (_rules.IsNull(siparisAndEnjektor))
+            {
+                throw new Exception("There is no siparisAndEnjektor");
+            }
+
+            return siparisAndEnjektor;
+        }
+
         public ICollection<Siparis> GetSiparises()
         {
             var siparises = _siparisRepository.GetSiparises();
