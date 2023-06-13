@@ -23,6 +23,23 @@ namespace BoschApp.BusinessLayer.Concrete
             _rules = rules;
         }
 
+        public ICollection<AltParca> GetAltParcaAndStokAlaniByIstasyon(int istasyonId)
+        {
+            if (!_istasyonRepository.IstasyonExist(istasyonId))
+            {
+                throw new Exception("There is no istasyon with id: " + istasyonId);
+            }
+
+            var altParcaAndStokAlani = _istasyonRepository.GetAltParcaAndStokAlaniByIstasyon(istasyonId);
+
+            if (_rules.IsNull(altParcaAndStokAlani))
+            {
+                throw new Exception("This istasyon has no altParca");
+            }
+
+            return altParcaAndStokAlani;
+        }
+
         public ICollection<AltParca> GetAltParcasByIstasyon(int istasyonId)
         {
             if (!_istasyonRepository.IstasyonExist(istasyonId))
