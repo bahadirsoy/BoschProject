@@ -21,7 +21,7 @@
                     <td> {{siparisAndEnjektor.enjektor.id}} </td>
                     <td> {{siparisAndEnjektor.enjektor.modelNo}} </td>
                     <td> {{siparisAndEnjektor.enjektor.tur}} </td>
-                    <td> <a class="btn btn-info">Go to production</a> </td>
+                    <td> <a [routerLink]="['/manufacture', siparisAndEnjektor.id]" class="btn btn-info">Go to production</a> </td>
                 </tr>
             </tbody>
         </table>
