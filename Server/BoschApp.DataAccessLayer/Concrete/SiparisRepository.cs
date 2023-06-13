@@ -3,6 +3,7 @@ using BoschApp.DataAccessLayer.Data;
 using BoschApp.EntityLayer.Entities.EnjektorEntity;
 using BoschApp.EntityLayer.Entities.SiparisEntity;
 using BoschApp.EntityLayer.Entities.UretimEntity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,11 @@ namespace BoschApp.DataAccessLayer.Concrete
         public Siparis GetSiparis(int siparisId)
         {
             return _context.Siparises.Where(s => s.Id == siparisId).FirstOrDefault();
+        }
+
+        public ICollection<Siparis> GetSiparisAndEnjektor(int siparisId)
+        {
+            return _context.Siparises.Where(s => s.Id == siparisId).Include(s => s.Enjektor).ToList();
         }
 
         public ICollection<Siparis> GetSiparises()
