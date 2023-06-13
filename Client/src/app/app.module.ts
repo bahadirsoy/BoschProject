@@ -20,10 +20,12 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CreateSiparisComponent } from './components/create-siparis/create-siparis.component';
+import { ManufactureComponent } from './components/manufacture/manufacture.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomepageComponent},
-  {path: 'createSiparis', component: CreateSiparisComponent}
+  {path: 'createSiparis', component: CreateSiparisComponent},
+  {path: 'manufacture', component: ManufactureComponent}
 ]
 
 @NgModule({
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomepageComponent,
     HeaderComponent,
-    CreateSiparisComponent
+    CreateSiparisComponent,
+    ManufactureComponent
   ],
   imports: [
     BrowserModule,
