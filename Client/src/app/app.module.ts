@@ -26,7 +26,8 @@ import { ProductionComponent } from './components/production/production.componen
 const appRoutes: Routes = [
   {path: '', component: HomepageComponent},
   {path: 'createSiparis', component: CreateSiparisComponent},
-  {path: 'manufacture', component: ManufactureComponent}
+  {path: 'manufacture', component: ManufactureComponent},
+  {path: 'manufacture/:id', component: ProductionComponent}
 ]
 
 @NgModule({
