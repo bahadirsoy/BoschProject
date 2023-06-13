@@ -11,11 +11,17 @@ import { BoschService } from 'src/app/services/bosch.service';
 export class IstasyonComponent {
   @Input() istasyon!: Istasyon;
 
-  constructor(httpService: BoschService) {
+  altParcasAndStokAlani: any = [];
+
+  constructor(private httpService: BoschService) {
 
   }
 
   ngOnInit(): void {
     console.log(this.istasyon);
+   
+    this.httpService.getAltParcasAndStokAlaniByIstasyon(this.istasyon.id).subscribe((altParcasAndStokAlani) => {
+      this.altParcasAndStokAlani = altParcasAndStokAlani;
+    })
   }
 }
