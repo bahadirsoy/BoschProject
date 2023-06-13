@@ -18,10 +18,9 @@ export class IstasyonComponent {
   }
 
   ngOnInit(): void {
-    console.log(this.istasyon);
-   
     this.httpService.getAltParcasAndStokAlaniByIstasyon(this.istasyon.id).subscribe((altParcasAndStokAlani) => {
       this.altParcasAndStokAlani = altParcasAndStokAlani;
+      console.log(this.altParcasAndStokAlani);
     })
   }
 }
