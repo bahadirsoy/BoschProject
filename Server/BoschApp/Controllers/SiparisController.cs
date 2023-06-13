@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BoschApp.BusinessLayer.Abstract;
 using BoschApp.EntityLayer.Entities.SiparisEntity;
+using BoschApp.EntityLayer.Entities.UretimEntity;
 using BoschApp.WebAPI.Dto;
 using Microsoft.AspNetCore.Mvc;
 
@@ -98,6 +99,26 @@ namespace BoschApp.WebAPI.Controllers
 
                 return Ok(uretims);
             }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("{siparisId}/siparisAndEnjektor")]
+        public IActionResult GetSiparisAndEnjektor(int siparisId)
+        {
+            try
+            {
+                var siparisAndEnjektor = _siparisBusinessService.GetSiparisAndEnjektor(siparisId);
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(siparisAndEnjektor);
+            } 
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
