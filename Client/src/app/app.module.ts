@@ -21,6 +21,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CreateSiparisComponent } from './components/create-siparis/create-siparis.component';
 import { ManufactureComponent } from './components/manufacture/manufacture.component';
+import { ProductionComponent } from './components/production/production.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomepageComponent},
@@ -34,7 +35,8 @@ const appRoutes: Routes = [
     HomepageComponent,
     HeaderComponent,
     CreateSiparisComponent,
-    ManufactureComponent
+    ManufactureComponent,
+    ProductionComponent
   ],
   imports: [
     BrowserModule,
