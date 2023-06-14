@@ -15,5 +15,6 @@ namespace BoschApp.BusinessLayer.Abstract
         Enjektor GetEnjektor(int enjektorId);
         Kisim GetKisimByEnjektor(int enjektorId);
         ICollection<AltParca> GetAltParcasByEnjektor(int enjektorId);
+        AltParca GetAltParcaByEnjektorAndIstasyon(int enjektorId, int istasyonId);
     }
 }

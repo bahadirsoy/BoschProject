@@ -14,7 +14,6 @@ export class IstasyonComponent {
   @Input() siparisId!: string;
 
   altParcasAndStokAlani: any = [];
-  enjektor!: Enjektor;
 
   constructor(private httpService: BoschService) {
 
@@ -27,11 +26,7 @@ export class IstasyonComponent {
     })
 
     this.httpService.getEnjektorBySiparis(+this.siparisId).subscribe((enjektor) => {
-      this.httpService.getAltParcasByEnjektor(enjektor.id).subscribe((altParcas) => {
-        this.httpService.getAltParcasByIstasyon(this.istasyon.id).subscribe((istasyonAltParcas) => {
-          console.log(istasyonAltParcas);
-        })
-      })
+      console.log(enjektor);
     })
   }
 }

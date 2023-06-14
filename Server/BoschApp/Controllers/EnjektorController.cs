@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BoschApp.BusinessLayer.Abstract;
+using BoschApp.EntityLayer.Entities.KisimEntity;
 using BoschApp.WebAPI.Dto;
 using Microsoft.AspNetCore.Mvc;
 
@@ -91,6 +92,26 @@ namespace BoschApp.WebAPI.Controllers
                 }
 
                 return Ok(kisim);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("{enjektorId}/{istasyonId}/altParca")]
+        public IActionResult GetAltParcaByEnjektorAndIstasyon(int enjektorId, int istasyonId)
+        {
+            try
+            {
+                var altParca = _enjektorBusinessService.GetAltParcaByEnjektorAndIstasyon(enjektorId, istasyonId);
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(altParca);
             }
             catch (Exception ex)
             {

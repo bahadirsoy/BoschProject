@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Enjektor } from 'src/app/models/Enjektor';
 import { Istasyon } from 'src/app/models/Istasyon';
 import { BoschService } from 'src/app/services/bosch.service';
 
