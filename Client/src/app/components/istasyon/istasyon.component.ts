@@ -16,6 +16,7 @@ export class IstasyonComponent {
 
   altParcasAndStokAlani: any = [];
   altParca!: AltParca;
+  isProduced!: boolean;
 
   constructor(private httpService: BoschService) {
 
@@ -29,6 +30,10 @@ export class IstasyonComponent {
     this.httpService.getEnjektorBySiparis(+this.siparisId).subscribe((enjektor) => {
       this.httpService.getAltParcaByEnjektorAndIstasyon(enjektor.id, this.istasyon.id).subscribe((altParca) => {
         this.altParca = altParca;
+
+        this.httpService.getIsProduced(+this.siparisId, this.altParca.id).subscribe((bool) => {
+          this.isProduced = bool;
+        })
       })
     })
   }
