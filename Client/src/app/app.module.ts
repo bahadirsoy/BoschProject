@@ -23,6 +23,7 @@ import { CreateSiparisComponent } from './components/create-siparis/create-sipar
 import { ManufactureComponent } from './components/manufacture/manufacture.component';
 import { ProductionComponent } from './components/production/production.component';
 import { IstasyonComponent } from './components/istasyon/istasyon.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const appRoutes: Routes = [
   {path: '', component: HomepageComponent},
@@ -51,7 +52,8 @@ const appRoutes: Routes = [
     MatInputModule,
     MatSliderModule,
     RouterModule.forRoot(appRoutes, {enableTracing: false}),
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   exports: [RouterModule],
   providers: [],
