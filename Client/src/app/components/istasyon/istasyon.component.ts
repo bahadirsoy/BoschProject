@@ -3,6 +3,7 @@ import { AltParca } from 'src/app/models/AltParca';
 import { Enjektor } from 'src/app/models/Enjektor';
 import { Istasyon } from 'src/app/models/Istasyon';
 import { BoschService } from 'src/app/services/bosch.service';
+import { faClipboardCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-istasyon',
@@ -17,6 +18,7 @@ export class IstasyonComponent {
   altParcasAndStokAlani: any = [];
   altParca!: AltParca;
   isProduced!: boolean;
+  faClipboardCheck = faClipboardCheck;
 
   constructor(private httpService: BoschService) {
 

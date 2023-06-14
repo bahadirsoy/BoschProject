@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 //angular material modules
 import {MatCardModule} from '@angular/material/card';
@@ -23,7 +24,6 @@ import { CreateSiparisComponent } from './components/create-siparis/create-sipar
 import { ManufactureComponent } from './components/manufacture/manufacture.component';
 import { ProductionComponent } from './components/production/production.component';
 import { IstasyonComponent } from './components/istasyon/istasyon.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const appRoutes: Routes = [
   {path: '', component: HomepageComponent},
