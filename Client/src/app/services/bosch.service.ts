@@ -32,4 +32,8 @@ export class BoschService {
   getAltParcasAndStokAlaniByIstasyon(istasyonId: number) {
     return this.http.get(this.apiUrl + "Istasyon/" + istasyonId + "/AltParcasAndStokAlani");
   }
+
+  getEnjektorBySiparis(siparisId: number)  {
+    return this.http.get(this.apiUrl + "Siparis/" + siparisId + "/enjektor");
+  }
 }
