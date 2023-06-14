@@ -14,6 +14,7 @@ namespace BoschApp.BusinessLayer.Abstract
         Uretim GetUretim(int uretimId);
         Siparis GetSiparisByUretim(int uretimId);
         AltParca GetAltParcaByUretim(int uretimId);
+        bool IsProduced(int siparisId, int altParcaId);
         bool CreateSiparis(Uretim uretim);
         bool DeleteUretim(Uretim uretim, int uretimId);
     }

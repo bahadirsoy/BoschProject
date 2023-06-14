@@ -99,5 +99,10 @@ namespace BoschApp.BusinessLayer.Concrete
 
             return uretim;
         }
+
+        public bool IsProduced(int siparisId, int altParcaId)
+        {
+            return _uretimRepository.IsProduced(siparisId, altParcaId);
+        }
     }
 }

@@ -87,6 +87,24 @@ namespace BoschApp.WebAPI.Controllers
             }
         }
 
+        [HttpGet("{siparisId}/{altParcaId}/isProduced")]
+        public IActionResult IsProduced(int siparisId, int altParcaId)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return Ok(_uretimBusinessService.IsProduced(siparisId, altParcaId));
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpPost]
         public IActionResult CreateUretim(
             [FromQuery] int siparisId, 
