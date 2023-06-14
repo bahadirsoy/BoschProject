@@ -5,6 +5,7 @@ import { AltParcaStok } from '../models/AltParcaStok';
 import { Siparis } from '../models/Siparis'
 import { Istasyon } from '../models/Istasyon';
 import { Enjektor } from '../models/Enjektor';
+import { AltParca } from '../models/AltParca';
 
 @Injectable({
   providedIn: 'root'
@@ -46,7 +47,7 @@ export class BoschService {
     return this.http.get(this.apiUrl + "Istasyon/" + istasyonId + "/altParca");
   }
 
-  getAltParcaByEnjektorAndIstasyon(enjektorId: number, istasyonId: number) {
-    return this.http.get(this.apiUrl + "Enjektor/" + enjektorId + "/" + istasyonId + "/altParca");
+  getAltParcaByEnjektorAndIstasyon(enjektorId: number, istasyonId: number): Observable<AltParca> {
+    return this.http.get<AltParca>(this.apiUrl + "Enjektor/" + enjektorId + "/" + istasyonId + "/altParca");
   }
 }

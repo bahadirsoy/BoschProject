@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AltParca } from 'src/app/models/AltParca';
 import { Enjektor } from 'src/app/models/Enjektor';
 import { Istasyon } from 'src/app/models/Istasyon';
 import { BoschService } from 'src/app/services/bosch.service';
@@ -14,6 +15,7 @@ export class IstasyonComponent {
   @Input() siparisId!: string;
 
   altParcasAndStokAlani: any = [];
+  altParca!: AltParca;
 
   constructor(private httpService: BoschService) {
 
@@ -22,11 +24,12 @@ export class IstasyonComponent {
   ngOnInit(): void {
     this.httpService.getAltParcasAndStokAlaniByIstasyon(this.istasyon.id).subscribe((altParcasAndStokAlani) => {
       this.altParcasAndStokAlani = altParcasAndStokAlani;
-      //console.log(this.altParcasAndStokAlani);
     })
 
     this.httpService.getEnjektorBySiparis(+this.siparisId).subscribe((enjektor) => {
-      console.log(enjektor);
+      this.httpService.getAltParcaByEnjektorAndIstasyon(enjektor.id, this.istasyon.id).subscribe((altParca) => {
+        this.altParca = altParca;
+      })
     })
   }
 }
