@@ -54,4 +54,8 @@ export class BoschService {
   getIsProduced(siparisId: number, altParcaId: number): Observable<boolean> {
     return this.http.get<boolean>(this.apiUrl + "Uretim/" + siparisId + "/" + altParcaId + "/isProduced");
   }
+  
+  createUretim(siparisId: number, altParcaId: number) {
+    return this.http.post(this.apiUrl + "Uretim?siparisId=" + siparisId + "&altParcaId=" + altParcaId, {});
+  }
 }
