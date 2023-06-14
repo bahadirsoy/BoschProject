@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AltParcaStok } from '../models/AltParcaStok';
 import { Siparis } from '../models/Siparis'
 import { Istasyon } from '../models/Istasyon';
+import { Enjektor } from '../models/Enjektor';
 
 @Injectable({
   providedIn: 'root'
@@ -33,11 +34,15 @@ export class BoschService {
     return this.http.get(this.apiUrl + "Istasyon/" + istasyonId + "/AltParcasAndStokAlani");
   }
 
-  getEnjektorBySiparis(siparisId: number)  {
-    return this.http.get(this.apiUrl + "Siparis/" + siparisId + "/enjektor");
+  getEnjektorBySiparis(siparisId: number): Observable<Enjektor>  {
+    return this.http.get<Enjektor>(this.apiUrl + "Siparis/" + siparisId + "/enjektor");
   }
 
   getAltParcasByEnjektor(enjektorId: number) {
     return this.http.get(this.apiUrl + "Enjektor/" + enjektorId + "/altParca");
+  }
+
+  getAltParcasByIstasyon(istasyonId: number) {
+    return this.http.get(this.apiUrl + "Istasyon/" + istasyonId + "/altParca");
   }
 }

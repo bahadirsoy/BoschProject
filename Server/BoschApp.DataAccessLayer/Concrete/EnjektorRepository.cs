@@ -3,6 +3,7 @@ using BoschApp.DataAccessLayer.Data;
 using BoschApp.EntityLayer.Entities.AltParcaEntity;
 using BoschApp.EntityLayer.Entities.EnjektorEntity;
 using BoschApp.EntityLayer.Entities.KisimEntity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
