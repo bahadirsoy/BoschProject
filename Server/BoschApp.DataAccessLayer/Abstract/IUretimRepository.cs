@@ -15,6 +15,7 @@ namespace BoschApp.DataAccessLayer.Abstract
         bool UretimExist(int uretimId);
         Siparis GetSiparisByUretim(int uretimId);
         AltParca GetAltParcaByUretim(int uretimId);
+        bool IsProduced(int siparisId, int altParcaId);
         bool CreateUretim(Uretim uretim);
         bool DeleteUretim(Uretim uretim);
         bool Save();

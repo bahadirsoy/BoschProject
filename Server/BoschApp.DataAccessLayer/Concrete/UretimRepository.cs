@@ -47,6 +47,11 @@ namespace BoschApp.DataAccessLayer.Concrete
             return _context.Uretims.Where(u => u.Id == uretimId).FirstOrDefault();
         }
 
+        public bool IsProduced(int siparisId, int altParcaId)
+        {
+            return _context.Uretims.Any(u => u.Siparis.Id == siparisId && u.AltParca.Id == altParcaId);
+        }
+
         public bool Save()
         {
             var saved = _context.SaveChanges();
