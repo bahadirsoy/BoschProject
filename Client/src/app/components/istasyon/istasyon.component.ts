@@ -27,7 +27,9 @@ export class IstasyonComponent {
   }
 
   onClick() {
-    console.log("clicked");
+    this.httpService.createUretim(+this.siparisId, this.altParca.id).subscribe((result) => {
+      console.log(result);
+    })
   }
 
   ngOnInit(): void {

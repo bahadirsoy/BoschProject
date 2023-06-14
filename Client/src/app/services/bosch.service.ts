@@ -56,6 +56,6 @@ export class BoschService {
   }
   
   createUretim(siparisId: number, altParcaId: number) {
-    return this.http.post(this.apiUrl + "Uretim?siparisId=" + siparisId + "&altParcaId=" + altParcaId, {});
+    return this.http.post(this.apiUrl + "Uretim?siparisId=" + siparisId + "&altParcaId=" + altParcaId, {}, {responseType: 'text'});
   }
 }
