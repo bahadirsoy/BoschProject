@@ -28,7 +28,9 @@ export class IstasyonComponent {
 
     this.httpService.getEnjektorBySiparis(+this.siparisId).subscribe((enjektor) => {
       this.httpService.getAltParcasByEnjektor(enjektor.id).subscribe((altParcas) => {
-        console.log(altParcas);
+        this.httpService.getAltParcasByIstasyon(this.istasyon.id).subscribe((istasyonAltParcas) => {
+          console.log(istasyonAltParcas);
+        })
       })
     })
   }

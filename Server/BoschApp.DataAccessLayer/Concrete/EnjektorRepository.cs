@@ -26,6 +26,13 @@ namespace BoschApp.DataAccessLayer.Concrete
             return _context.Enjektors.Any(e => e.Id == enjektorId);
         }
 
+        public AltParca GetAltParcaByEnjektorAndIstasyon(int enjektorId, int istasyonId)
+        {
+            return _context.EnjektorAltParcas.Where(ea => ea.EnjektorId == enjektorId)
+                .Select(ea => ea.AltParca)
+                .Where(a => a.Istasyon.Id == istasyonId).FirstOrDefault();
+        }
+
         public ICollection<AltParca> GetAltParcasByEnjektor(int enjektorId)
         {
             return _context.EnjektorAltParcas.Where(ea => ea.Enjektor.Id == enjektorId).Select(ea => ea.AltParca).ToList();
