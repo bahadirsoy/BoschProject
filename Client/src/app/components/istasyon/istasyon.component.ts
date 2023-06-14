@@ -21,7 +21,11 @@ export class IstasyonComponent {
   ngOnInit(): void {
     this.httpService.getAltParcasAndStokAlaniByIstasyon(this.istasyon.id).subscribe((altParcasAndStokAlani) => {
       this.altParcasAndStokAlani = altParcasAndStokAlani;
-      console.log(this.altParcasAndStokAlani);
+      //console.log(this.altParcasAndStokAlani);
+    })
+
+    this.httpService.getEnjektorBySiparis(+this.siparisId).subscribe((enjektor) => {
+      console.log(enjektor);
     })
   }
 }
