@@ -36,4 +36,8 @@ export class BoschService {
   getEnjektorBySiparis(siparisId: number)  {
     return this.http.get(this.apiUrl + "Siparis/" + siparisId + "/enjektor");
   }
+
+  getAltParcasByEnjektor(enjektorId: number) {
+    return this.http.get(this.apiUrl + "Enjektor/" + enjektorId + "/altParca");
+  }
 }
