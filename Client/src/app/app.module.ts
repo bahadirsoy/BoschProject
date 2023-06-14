@@ -14,7 +14,7 @@ import {MatSliderModule} from '@angular/material/slider';
 
 //angular bootstrap modules
 import { NgbAlertModule, NgbNav } from '@ng-bootstrap/ng-bootstrap';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
 
 //components
 import { AppComponent } from './app.component';
@@ -53,7 +53,8 @@ const appRoutes: Routes = [
     MatSliderModule,
     RouterModule.forRoot(appRoutes, {enableTracing: false}),
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgbTooltip
   ],
   exports: [RouterModule],
   providers: [],
