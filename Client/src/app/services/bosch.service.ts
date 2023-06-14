@@ -50,4 +50,8 @@ export class BoschService {
   getAltParcaByEnjektorAndIstasyon(enjektorId: number, istasyonId: number): Observable<AltParca> {
     return this.http.get<AltParca>(this.apiUrl + "Enjektor/" + enjektorId + "/" + istasyonId + "/altParca");
   }
+
+  getIsProduced(siparisId: number, altParcaId: number): Observable<boolean> {
+    return this.http.get<boolean>(this.apiUrl + "Uretim/" + siparisId + "/" + altParcaId + "/isProduced");
+  }
 }
