@@ -10,6 +10,7 @@ import { BoschService } from 'src/app/services/bosch.service';
 
 export class IstasyonComponent {
   @Input() istasyon!: Istasyon;
+  @Input() siparisId!: string;
 
   altParcasAndStokAlani: any = [];
 
