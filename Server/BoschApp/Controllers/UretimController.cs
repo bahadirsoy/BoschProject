@@ -108,15 +108,17 @@ namespace BoschApp.WebAPI.Controllers
         [HttpPost]
         public IActionResult CreateUretim(
             [FromQuery] int siparisId, 
-            [FromQuery] int altParcaId, 
-            [FromBody] UretimDto uretim)
+            [FromQuery] int altParcaId)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var uretimMap = _mapper.Map<Uretim>(uretim);
+            var uretimMap = _mapper.Map<Uretim>
+                (new Uretim{
+                    UretimDurumu = 1
+                });
 
             uretimMap.Siparis = _siparisBusinessService.GetSiparis(siparisId);
             uretimMap.AltParca = _altParcaBusinessService.GetAltParca(altParcaId);
