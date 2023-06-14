@@ -28,7 +28,7 @@ export class IstasyonComponent {
 
   onClick() {
     this.httpService.createUretim(+this.siparisId, this.altParca.id).subscribe((result) => {
-      console.log(result);
+      this.isProduced = true;
     })
   }
 

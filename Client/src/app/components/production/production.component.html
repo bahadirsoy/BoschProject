@@ -1,13 +1,11 @@
 <div class="container-fluid mt-5">
   <div class="row">
-    <div class="col-1">
-    </div>
+    <div class="col-xl-1 col-lg-0"></div>
 
-    <div class="col-2" *ngFor="let istasyon of istasyons">
+    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mt-4" *ngFor="let istasyon of istasyons">
         <app-istasyon [istasyon]="istasyon" [siparisId]="id" >production works!</app-istasyon>
     </div>
 
-    <div class="col-1">
-    </div>
+    <div class="col-xl-1 col-lg-0"></div>
   </div>
 </div>
