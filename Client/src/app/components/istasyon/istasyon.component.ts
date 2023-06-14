@@ -19,8 +19,13 @@ export class IstasyonComponent {
   altParcasAndStokAlani: any = [];
   altParca!: AltParca;
   isProduced!: boolean;
+
+  //icons
   faClipboardCheck = faClipboardCheck;
   faIndustry = faIndustry;
+
+  //alert
+  alertDisplay = "none";
 
   constructor(private httpService: BoschService) {
 
@@ -30,6 +35,8 @@ export class IstasyonComponent {
     this.httpService.createUretim(+this.siparisId, this.altParca.id).subscribe((result) => {
       this.isProduced = true;
     })
+
+    this.alertDisplay = "block";
   }
 
   ngOnInit(): void {
