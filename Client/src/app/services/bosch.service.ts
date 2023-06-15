@@ -6,6 +6,7 @@ import { Siparis } from '../models/Siparis'
 import { Istasyon } from '../models/Istasyon';
 import { Enjektor } from '../models/Enjektor';
 import { AltParca } from '../models/AltParca';
+import { StokAlani } from '../models/StokAlani';
 
 @Injectable({
   providedIn: 'root'
@@ -57,5 +58,13 @@ export class BoschService {
   
   createUretim(siparisId: number, altParcaId: number) {
     return this.http.post(this.apiUrl + "Uretim?siparisId=" + siparisId + "&altParcaId=" + altParcaId, {}, {responseType: 'text'});
+  }
+
+  getSiparis(siparisId: number): Observable<Siparis> {
+    return this.http.get<Siparis>(this.apiUrl + "Siparis/" + siparisId);
+  }
+
+  getStokAlaniByAltParca(altParcaId: number): Observable<StokAlani> {
+    return this.http.get<StokAlani>(this.apiUrl + "AltParca/" + altParcaId + "/stokAlani");
   }
 }
