@@ -5,6 +5,7 @@ using BoschApp.EntityLayer.Entities.AltParcaEntity;
 using BoschApp.EntityLayer.Entities.DepartmanEntityEntity;
 using BoschApp.EntityLayer.Entities.SiparisEntity;
 using BoschApp.EntityLayer.Entities.UretimEntity;
+using BoschApp.EntityLayer.Entities.StokAlaniEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,17 +19,20 @@ namespace BoschApp.BusinessLayer.Concrete
         private readonly IUretimRepository _uretimRepository;
         private readonly ISiparisRepository _siparisRepository;
         private readonly IAltParcaRepository _altParcaRepository;
+        private readonly IStokAlaniRepository _stokAlaniRepository;
         private readonly BusinessRules _rules;
 
         public UretimBusinessService(
             IUretimRepository uretimRepository,
             ISiparisRepository siparisRepository,
             IAltParcaRepository altParcaRepository,
+            IStokAlaniRepository stokAlaniRepository,
             BusinessRules rules)
         {
             _uretimRepository = uretimRepository;
             _siparisRepository = siparisRepository;
             _altParcaRepository = altParcaRepository;
+            _stokAlaniRepository = stokAlaniRepository;
             _rules = rules;
         }
 
@@ -47,6 +51,9 @@ namespace BoschApp.BusinessLayer.Concrete
                 throw new Exception("There is not enough altParca for this siparis");
             }
 
+            stokAlani.StokAdeti -= _siparisRepository.GetSiparis(siparisId).Adet;
+
+            _stokAlaniRepository.UpdateStokAlani(stokAlani);
             return _uretimRepository.CreateUretim(uretim);
         }
 

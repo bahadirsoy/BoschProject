@@ -44,7 +44,6 @@ namespace BoschApp.DataAccessLayer.Concrete
         public StokAlani GetStokAlaniByAltParca(int altParcaId)
         {
             return _context.StokAlanis.Where(s => s.AltParca.Id == altParcaId).Include(s => s.AltParca).FirstOrDefault();
-            //return _context.StokAlanis.Where(s => s.AltParca.Id == altParcaId).FirstOrDefault();
         }
 
         public bool Save()
