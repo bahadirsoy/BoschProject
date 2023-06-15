@@ -123,7 +123,7 @@ namespace BoschApp.WebAPI.Controllers
             uretimMap.Siparis = _siparisBusinessService.GetSiparis(siparisId);
             uretimMap.AltParca = _altParcaBusinessService.GetAltParca(altParcaId);
 
-            if (!_uretimBusinessService.CreateUretim(uretimMap))
+            if (!_uretimBusinessService.CreateUretim(uretimMap, siparisId, altParcaId))
             {
                 ModelState.AddModelError("", "Something went wrong while creating uretim");
                 return StatusCode(500, ModelState);

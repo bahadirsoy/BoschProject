@@ -16,19 +16,35 @@ namespace BoschApp.BusinessLayer.Concrete
     public class UretimBusinessService : IUretimBusinessService
     {
         private readonly IUretimRepository _uretimRepository;
+        private readonly ISiparisRepository _siparisRepository;
+        private readonly IAltParcaRepository _altParcaRepository;
         private readonly BusinessRules _rules;
 
-        public UretimBusinessService(IUretimRepository uretimRepository, BusinessRules rules)
+        public UretimBusinessService(
+            IUretimRepository uretimRepository,
+            ISiparisRepository siparisRepository,
+            IAltParcaRepository altParcaRepository,
+            BusinessRules rules)
         {
             _uretimRepository = uretimRepository;
+            _siparisRepository = siparisRepository;
+            _altParcaRepository = altParcaRepository;
             _rules = rules;
         }
 
-        public bool CreateUretim(Uretim uretim)
+        public bool CreateUretim(Uretim uretim, int siparisId, int altParcaId)
         {
             if (_rules.IsNull(uretim))
             {
                 throw new Exception("There is no uretim to be created");
+            }
+
+            var siparis = _siparisRepository.GetSiparis(siparisId);
+            var stokAlani = _altParcaRepository.GetStokAlaniByAltParca(altParcaId);
+
+            if(stokAlani.StokAdeti < siparis.Adet)
+            {
+                throw new Exception("There is not enough altParca for this siparis");
             }
 
             return _uretimRepository.CreateUretim(uretim);
