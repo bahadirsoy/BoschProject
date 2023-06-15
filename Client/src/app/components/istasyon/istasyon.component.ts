@@ -27,16 +27,33 @@ export class IstasyonComponent {
   //alert
   alertDisplay = "none";
 
+  //check if there is enough stok adeti
+  stokAdeti! : number;
+  neededAdet!: number;
+
   constructor(private httpService: BoschService) {
 
   }
 
   onClick() {
-    this.httpService.createUretim(+this.siparisId, this.neededAltParca.id).subscribe((result) => {
-      this.isProduced = true;
-    })
+    this.httpService.getStokAlaniByAltParca(this.neededAltParca.id).subscribe((stokAlani) => {
+      this.stokAdeti = stokAlani.stokAdeti;
 
-    this.alertDisplay = "block";
+      this.httpService.getSiparis(+this.siparisId).subscribe((siparis) => {
+        this.neededAdet = siparis.adet;
+
+        if(this.stokAdeti < this.neededAdet){
+          console.log("yetmedi");
+          return;
+        }
+    
+        this.httpService.createUretim(+this.siparisId, this.neededAltParca.id).subscribe((result) => {
+          this.isProduced = true;
+        })
+    
+        this.alertDisplay = "block";
+      })
+    })
   }
 
   ngOnInit(): void {

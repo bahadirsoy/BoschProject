@@ -19,7 +19,7 @@ export class CreateSiparisComponent {
 
   onSubmit() {
     const newSiparis: Siparis = {
-      Adet: this.adet,
+      adet: this.adet,
       SiparisDurumu: 0
     }
 

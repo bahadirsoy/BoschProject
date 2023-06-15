@@ -1,4 +1,4 @@
 export interface Siparis {
-    Adet: number;
+    adet: number;
     SiparisDurumu: number;
 }
