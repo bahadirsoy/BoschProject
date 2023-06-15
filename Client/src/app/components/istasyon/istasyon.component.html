@@ -2,7 +2,10 @@
   <div class="card-body">
     <h3 class="card-title">Istasyon {{ istasyon.isim }}</h3>
     <ul class="list-group mt-3">
-      <li *ngFor="let altParca of altParcasAndStokAlani" class="list-group-item">
+      <li 
+        *ngFor="let altParca of altParcasAndStokAlani" 
+        [ngStyle]="{'font-weight': neededAltParca ? (neededAltParca.id == altParca.id ? 'bold' : 'normal') : null}" 
+        class="list-group-item">
         {{ altParca.stokAlanis[0].stokAdeti }} {{ altParca.name }} sub part
       </li>
     </ul>

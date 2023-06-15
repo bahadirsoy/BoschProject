@@ -23,7 +23,6 @@ export class ProductionComponent {
    
     this.httpService.getIstasyons().subscribe((istasyons) => {
       this.istasyons = istasyons;
-      //console.log(this.istasyons);
     })
   }
 }

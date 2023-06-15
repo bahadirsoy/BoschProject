@@ -17,7 +17,7 @@ export class IstasyonComponent {
   @Input() siparisId!: string;
 
   altParcasAndStokAlani: any = [];
-  altParca!: AltParca;
+  neededAltParca!: AltParca;
   isProduced!: boolean;
 
   //icons
@@ -32,7 +32,7 @@ export class IstasyonComponent {
   }
 
   onClick() {
-    this.httpService.createUretim(+this.siparisId, this.altParca.id).subscribe((result) => {
+    this.httpService.createUretim(+this.siparisId, this.neededAltParca.id).subscribe((result) => {
       this.isProduced = true;
     })
 
@@ -42,13 +42,14 @@ export class IstasyonComponent {
   ngOnInit(): void {
     this.httpService.getAltParcasAndStokAlaniByIstasyon(this.istasyon.id).subscribe((altParcasAndStokAlani) => {
       this.altParcasAndStokAlani = altParcasAndStokAlani;
+      console.log(this.altParcasAndStokAlani);
     })
 
     this.httpService.getEnjektorBySiparis(+this.siparisId).subscribe((enjektor) => {
       this.httpService.getAltParcaByEnjektorAndIstasyon(enjektor.id, this.istasyon.id).subscribe((altParca) => {
-        this.altParca = altParca;
+        this.neededAltParca = altParca;
 
-        this.httpService.getIsProduced(+this.siparisId, this.altParca.id).subscribe((bool) => {
+        this.httpService.getIsProduced(+this.siparisId, this.neededAltParca.id).subscribe((bool) => {
           this.isProduced = bool;
         })
       })
