@@ -25,7 +25,8 @@ export class IstasyonComponent {
   faIndustry = faIndustry;
 
   //alert
-  alertDisplay = "none";
+  successAlertDisplay = "none";
+  errorAlertDisplay = "none";
 
   //check if there is enough stok adeti
   stokAdeti! : number;
@@ -43,7 +44,7 @@ export class IstasyonComponent {
         this.neededAdet = siparis.adet;
 
         if(this.stokAdeti < this.neededAdet){
-          console.log("yetmedi");
+          this.errorAlertDisplay = "block";
           return;
         }
     
@@ -51,7 +52,7 @@ export class IstasyonComponent {
           this.isProduced = true;
         })
     
-        this.alertDisplay = "block";
+        this.successAlertDisplay = "block";
       })
     })
   }
