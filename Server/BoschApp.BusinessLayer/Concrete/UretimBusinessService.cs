@@ -24,7 +24,7 @@ namespace BoschApp.BusinessLayer.Concrete
             _rules = rules;
         }
 
-        public bool CreateSiparis(Uretim uretim)
+        public bool CreateUretim(Uretim uretim)
         {
             if (_rules.IsNull(uretim))
             {
